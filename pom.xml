@@ -5,6 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <name>GeoMesa SQL</name>
+  <description>Run SQL queries on GeoMesa DataStores</description>
+  <url>https://github.com/bxkftechteam/geomesa-sql</url>
 
   <groupId>io.github.bxkftechteam</groupId>
   <artifactId>geomesa-sql_2.12</artifactId>
@@ -18,6 +20,19 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <scm>
+    <url>https://github.com/bxkftechteam/geomesa-sql</url>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Kristin Cowalcijk</name>
+      <email>kristincowalcijk@gmail.com</email>
+      <organization>Bai Xing Car Service</organization>
+      <organizationUrl>https://www.baixingkefu.cn</organizationUrl>
+    </developer>
+  </developers>
 
   <modules>
     <module>geomesa-sql-common</module>
@@ -48,6 +63,55 @@
     <specs2.version>4.9.2</specs2.version>
     <junit.version>4.13.1</junit.version>
   </properties>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.7</version>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>ossrh</serverId>
+              <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+              <autoReleaseAfterClose>false</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>3.2.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                  <goal>test-jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
   <dependencyManagement>
     <dependencies>
@@ -197,8 +261,8 @@
         </configuration>
         <executions>
           <execution>
-            <id>scala-compile</id>
-            <phase>compile</phase>
+            <id>scala-compile-first</id>
+            <phase>process-resources</phase>
             <goals>
               <goal>add-source</goal>
               <goal>compile</goal>
@@ -209,6 +273,12 @@
             <phase>test-compile</phase>
             <goals>
               <goal>testCompile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>doc-jar</goal>
             </goals>
           </execution>
         </executions>
@@ -255,4 +325,33 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <repositories>
+    <!-- include central so that it is searched before our alternate repos -->
+    <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>https://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <!-- geotools -->
+    <repository>
+      <id>osgeo</id>
+      <url>https://repo.osgeo.org/repository/release</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
