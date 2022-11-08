@@ -1,0 +1,10 @@
+version: 1.0
+defaultSchema: CSV
+schemas:
+  - name: CSV
+    tables:
+      - name: TEST_DATA
+        type: custom
+        factory: org.apache.calcite.adapter.file.CsvTableFactory
+        operand:
+          file: test_data.csv

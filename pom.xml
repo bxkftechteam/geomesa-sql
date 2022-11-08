@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>GeoMesa SQL</name>
+
+  <groupId>io.github.bxkftechteam</groupId>
+  <artifactId>geomesa-sql_2.12</artifactId>
+  <packaging>pom</packaging>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <modules>
+    <module>geomesa-sql-common</module>
+    <module>geomesa-sql-core</module>
+    <module>geomesa-sql-jdbc</module>
+    <module>geomesa-sql-cli</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+
+    <scala.version>2.12.13</scala.version>
+    <scala.binary.version>2.12</scala.binary.version>
+
+    <calcite.version>1.32.0</calcite.version>
+    <avatica.version>1.22.0</avatica.version>
+    <immutables.version>2.8.8</immutables.version>
+
+    <geomesa.version>3.4.1</geomesa.version>
+    <gt.version>23.3</gt.version>
+
+    <!-- Accumulo dependencies for running unit test -->
+    <accumulo.version>2.0.1</accumulo.version>
+
+    <sqlline.version>1.12.0</sqlline.version>
+    <specs2.version>4.9.2</specs2.version>
+    <junit.version>4.13.1</junit.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Submodules -->
+      <dependency>
+        <groupId>io.github.bxkftechteam</groupId>
+        <artifactId>geomesa-sql-common_${scala.binary.version}</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.bxkftechteam</groupId>
+        <artifactId>geomesa-sql-core_${scala.binary.version}</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.bxkftechteam</groupId>
+        <artifactId>geomesa-sql-jdbc_${scala.binary.version}</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- GeoMesa DataStore -->
+      <dependency>
+        <groupId>org.locationtech.geomesa</groupId>
+        <artifactId>geomesa-index-api_${scala.binary.version}</artifactId>
+        <version>${geomesa.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.locationtech.geomesa</groupId>
+        <artifactId>geomesa-filter_${scala.binary.version}</artifactId>
+        <version>${geomesa.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.locationtech.geomesa</groupId>
+        <artifactId>geomesa-utils_${scala.binary.version}</artifactId>
+        <version>${geomesa.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.geotools</groupId>
+        <artifactId>gt-epsg-hsql</artifactId>
+        <version>${gt.version}</version>
+      </dependency>
+
+      <!-- Apache Calcite -->
+      <dependency>
+        <groupId>org.apache.calcite</groupId>
+        <artifactId>calcite-core</artifactId>
+        <version>${calcite.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.calcite.avatica</groupId>
+            <artifactId>avatica-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.calcite</groupId>
+        <artifactId>calcite-file</artifactId>
+        <version>${calcite.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.calcite.avatica</groupId>
+            <artifactId>avatica-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.calcite.avatica</groupId>
+        <artifactId>avatica</artifactId>
+        <version>${avatica.version}</version>
+      </dependency>
+
+      <!-- Other dependencies -->
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>value</artifactId>
+        <version>${immutables.version}</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!-- main CLI entry -->
+      <dependency>
+        <groupId>sqlline</groupId>
+        <artifactId>sqlline</artifactId>
+        <version>${sqlline.version}</version>
+      </dependency>
+
+      <!-- Test -->
+      <dependency>
+        <groupId>org.specs2</groupId>
+        <artifactId>specs2-core_${scala.binary.version}</artifactId>
+        <version>${specs2.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.specs2</groupId>
+        <artifactId>specs2-junit_${scala.binary.version}</artifactId>
+        <version>${specs2.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>3.2.4</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.4.4</version>
+        <configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.scala-lang</groupId>
+              <artifactId>scala-reflect</artifactId>
+              <version>${scala.version}</version>
+            </dependency>
+          </dependencies>
+          <jvmArgs>
+            <jvmArg>-Xms1024m</jvmArg>
+            <jvmArg>-Xmx8G</jvmArg>
+            <jvmArg>-Duser.timezone=UTC</jvmArg>
+            <jvmArg>-Djava.awt.headless=true</jvmArg>
+          </jvmArgs>
+          <args>
+            <arg>-nowarn</arg>
+            <arg>-unchecked</arg>
+            <arg>-deprecation</arg>
+            <arg>-target:jvm-1.8</arg>
+          </args>
+          <source>1.8</source>
+          <target>1.8</target>
+          <scalaVersion>${scala.version}</scalaVersion>
+        </configuration>
+        <executions>
+          <execution>
+            <id>scala-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>add-source</goal>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>scala-test-compile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
+        <configuration>
+          <systemPropertyVariables>
+            <geomesa.scan.ranges.target>500</geomesa.scan.ranges.target>
+            <geomesa.hbase.test.region.servers>1</geomesa.hbase.test.region.servers>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.scoverage</groupId>
+        <artifactId>scoverage-maven-plugin</artifactId>
+        <version>1.4.11</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal> <!-- or integration-check -->
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.scoverage</groupId>
+        <artifactId>scoverage-maven-plugin</artifactId>
+        <version>1.4.11</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report-only</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>
