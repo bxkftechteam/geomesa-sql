@@ -68,6 +68,16 @@
         </executions>
         <configuration>
           <createDependencyReducedPom>false</createDependencyReducedPom>
+          <relocations>
+            <relocation>
+              <pattern>com.google</pattern>
+              <shadedPattern>com.spatialx.geomesa.sql.shaded.com.google</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>com.fasterxml</pattern>
+              <shadedPattern>com.spatialx.geomesa.sql.shaded.com.fasterxml</shadedPattern>
+            </relocation>
+          </relocations>
           <filters>
             <filter>
               <artifact>*:*</artifact>

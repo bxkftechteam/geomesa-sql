@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+script_file=$(readlink -f $0)
+script_dir=$(dirname $script_file)
+GEOMESA_SQL_HOME=$(dirname $script_dir)
+GEOMESA_SQL_CONF_PATH="${GEOMESA_SQL_HOME}/conf"
+GEOMESA_HOME="${GEOMESA_HOME:-$GEOMESA_SQL_HOME}"
+
+# Sanity checks for GEOMESA_HOME
+if [ ! -d "$GEOMESA_HOME" ]; then
+    echo "ERROR: GEOMESA_HOME is not an existing directory: $GEOMESA_HOME" 1>&2
+    exit 1
+fi
+if [ ! -d "$GEOMESA_HOME/bin" ]; then
+    echo "ERROR: GEOMESA_HOME does not have a bin/ directory: $GEOMESA_HOME/bin" 1>&2
+    exit 1
+fi
+
+# Use geomesa-sql-cli jar in target directory or lib directory
+GEOMESA_SQL_LIB_PATH="${GEOMESA_SQL_HOME}/lib"
+if [ -d "${GEOMESA_SQL_HOME}/target" ]; then
+    GEOMESA_SQL_CLI_JAR_NAME=$(ls ${GEOMESA_SQL_HOME}/target | grep -Ev "javadoc.jar|sources.jar" | grep "^geomesa-sql-cli_.*.jar\$" | head -n1)
+    if [ -n "$GEOMESA_SQL_CLI_JAR_NAME" ]; then
+        echo "Running geomesa-sqlline in developement directory: using $GEOMESA_SQL_CLI_JAR_NAME in target directory" 1>&2
+        GEOMESA_SQL_CLI_JAR_PATH="${GEOMESA_SQL_HOME}/target/$GEOMESA_SQL_CLI_JAR_NAME"
+    fi
+fi
+
+if [ -z "$GEOMESA_SQL_CLI_JAR_PATH" ]; then
+    GEOMESA_SQL_CLI_JAR_NAME=$(ls ${GEOMESA_SQL_HOME}/lib | grep "^geomesa-sql-cli_.*.jar\$" | head -n1)
+    if [ -z "$GEOMESA_SQL_CLI_JAR_NAME" ]; then
+        echo "ERROR: Cannot find geomesa-sql-cli jar in ${GEOMESA_SQL_HOME}/lib directory" 1>&2
+        exit 1
+    fi
+    GEOMESA_SQL_CLI_JAR_PATH="${GEOMESA_SQL_HOME}/lib/$GEOMESA_SQL_CLI_JAR_NAME"
+fi
+
+# Determine catalog prop using geomesa distribution type
+GEOMESA_TOOL_NAME=$(ls "$GEOMESA_HOME/bin/" | grep -v "geomesa-sqlline" | grep "^geomesa-" | head -n1)
+if [ -z "$GEOMESA_TOOL_NAME" ]; then
+    echo "ERROR: GEOMESA_HOME does not point to a valid geomesa distribution" 1>&2
+    exit 1
+fi
+
+case "$GEOMESA_TOOL_NAME" in
+    "geomesa-accumulo")
+        CATALOG_PROP_NAME=accumulo.catalog
+        ;;
+    "geomesa-hbase")
+        CATALOG_PROP_NAME=hbase.catalog
+        ;;
+    "geomesa-cassandra")
+        CATALOG_PROP_NAME=cassandra.catalog
+        ;;
+    "geomesa-bigtable")
+        CATALOG_PROP_NAME=bigtable.catalog
+        ;;
+    "geomesa-redis")
+        CATALOG_PROP_NAME=redis.catalog
+        ;;
+    "geomesa-fs")
+        CATALOG_PROP_NAME=fs.path
+        ;;
+    *)
+        echo "geomesa-sqlline don't know how to specify catalog property for ${GEOMESA_TOOL_NAME}." 1>&2
+        echo "Please specify datastore parameters manually using -p <params>" 1>&2
+        ;;
+esac
+
+usage() {
+    echo "Usage: $0 -c <catalog> [-p <datastore params>]" 1>&2
+    exit 1;
+}
+
+while getopts ":c:p:h" o; do
+    case "$o" in
+        c)
+            CATALOG=${OPTARG}
+            ;;
+        p)
+            DS_PARAMS=${OPTARG}
+            ;;
+        h)
+            usage
+    esac
+done
+
+if [ -z "$CATALOG" ] && [ -z "$DS_PARAMS" ]; then
+    usage
+fi
+
+# Find the java binary
+if [ -n "${JAVA_HOME}" ]; then
+  RUNNER="${JAVA_HOME}/bin/java"
+else
+  if [ "$(command -v java)" ]; then
+    RUNNER="java"
+  else
+    echo "ERROR: JAVA_HOME is not set" >&2
+    exit 1
+  fi
+fi
+
+# Run sqlline
+GEOMESA_CLASSPATH=$(${GEOMESA_HOME}/bin/${GEOMESA_TOOL_NAME} classpath | tr '\n' ':')
+JDBC_URL="jdbc:geomesa:${CATALOG_PROP_NAME}=${CATALOG};fun=spatial;caseSensitive=false;${DS_PARAMS}"
+
+$RUNNER -classpath "${GEOMESA_CLASSPATH}:${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}" \
+     sqlline.SqlLine \
+     --verbose=true \
+     --connectInteractionMode=notAskCredentials \
+     -u "$JDBC_URL"
