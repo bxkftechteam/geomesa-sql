@@ -266,6 +266,7 @@
             <arg>-nowarn</arg>
             <arg>-unchecked</arg>
             <arg>-deprecation</arg>
+            <arg>-Xexperimental</arg>
             <arg>-target:jvm-1.8</arg>
           </args>
           <source>1.8</source>

@@ -22,6 +22,8 @@ script_dir=$(dirname $script_file)
 GEOMESA_SQL_HOME=$(dirname $script_dir)
 GEOMESA_SQL_CONF_PATH="${GEOMESA_SQL_HOME}/conf"
 GEOMESA_HOME="${GEOMESA_HOME:-$GEOMESA_SQL_HOME}"
+GEOMESA_CONF_DIR="${GEOMESA_CONF_DIR:-$GEOMESA_HOME/conf}"
+GEOMESA_LOG_DIR="${GEOMESA_LOG_DIR:-$GEOMESA_HOME/logs}"
 
 # Sanity checks for GEOMESA_HOME
 if [ ! -d "$GEOMESA_HOME" ]; then
@@ -89,13 +91,19 @@ usage() {
     exit 1;
 }
 
-while getopts ":c:p:h" o; do
+while getopts ":c:p:f:e:h" o; do
     case "$o" in
         c)
             CATALOG=${OPTARG}
             ;;
         p)
             DS_PARAMS=${OPTARG}
+            ;;
+        f)
+            INPUT_FILE=${OPTARG}
+            ;;
+        e)
+            SQL=${OPTARG}
             ;;
         h)
             usage
@@ -122,8 +130,23 @@ fi
 GEOMESA_CLASSPATH=$(${GEOMESA_HOME}/bin/${GEOMESA_TOOL_NAME} classpath | tr '\n' ':')
 JDBC_URL="jdbc:geomesa:${CATALOG_PROP_NAME}=${CATALOG};fun=spatial;caseSensitive=false;${DS_PARAMS}"
 
-$RUNNER -classpath "${GEOMESA_CLASSPATH}:${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}" \
-     sqlline.SqlLine \
-     --verbose=true \
-     --connectInteractionMode=notAskCredentials \
-     -u "$JDBC_URL"
+mkdir -p "${GEOMESA_LOG_DIR}"
+
+ARGS=("-u" "$JDBC_URL")
+if [ -n "$INPUT_FILE" ]; then
+    ARGS+=("-f" "$INPUT_FILE")
+fi
+if [ -n "$SQL" ]; then
+    ARGS+=("-e" "$SQL")
+fi
+
+$RUNNER \
+    -Dlog4j.configuration=file://${GEOMESA_CONF_DIR}/log4j.properties \
+    -Dgeomesa.home=${GEOMESA_HOME} \
+    -Dgeomesa.log.dir=${GEOMESA_LOG_DIR} \
+    -classpath "${GEOMESA_CLASSPATH}:${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}" \
+    sqlline.SqlLine \
+    --verbose=true \
+    --connectInteractionMode=notAskCredentials \
+    -u "$JDBC_URL" \
+    "${ARGS[@]}"

@@ -113,7 +113,7 @@ class Driver extends org.apache.calcite.jdbc.Driver {
   /**
    * Ensure that the driver will be registered on first instantiation of Driver object.
    */
-  isRegistered.synchronized {
+  Driver.synchronized {
     if (!isRegistered) {
       register()
       isRegistered = true

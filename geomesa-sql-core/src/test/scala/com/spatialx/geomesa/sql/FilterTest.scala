@@ -202,7 +202,7 @@ class FilterTest extends Specification {
         "ST_Contains(ST_MakeEnvelope(3, 3, 8, 8), pt)",
         "ST_Crosses(ST_MakeEnvelope(3, 3, 8, 8), line)",
         "ST_Overlaps(ST_MakeEnvelope(10, 10, 80, 80), poly)",
-        "ST_DWithin(ST_MakeEnvelope(3, 3, 8, 8), pt, 5)",
+        "ST_DWithin(ST_MakeEnvelope(3, 3, 8, 8), pt, 5)"
       )
       Result.foreach(predicates) { predicate =>
         verifyGeometry(s"SELECT * FROM TEST_GEOM_DATA WHERE $predicate",
