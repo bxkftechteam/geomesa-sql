@@ -64,25 +64,80 @@ fi
 case "$GEOMESA_TOOL_NAME" in
     "geomesa-accumulo")
         CATALOG_PROP_NAME=accumulo.catalog
+        export GEOMESA_ACCUMULO_HOME="${GEOMESA_ACCUMULO_HOME:-$GEOMESA_HOME}"
         ;;
     "geomesa-hbase")
         CATALOG_PROP_NAME=hbase.catalog
+        export GEOMESA_HBASE_HOME="${GEOMESA_HBASE_HOME:-$GEOMESA_HOME}"
         ;;
     "geomesa-cassandra")
         CATALOG_PROP_NAME=cassandra.catalog
-        ;;
-    "geomesa-bigtable")
-        CATALOG_PROP_NAME=bigtable.catalog
+        export GEOMESA_CASSANDRA_HOME="${GEOMESA_CASSANDRA_HOME:-$GEOMESA_HOME}"
         ;;
     "geomesa-redis")
         CATALOG_PROP_NAME=redis.catalog
+        export GEOMESA_REDIS_HOME="${GEOMESA_REDIS_HOME:-$GEOMESA_HOME}"
         ;;
     "geomesa-fs")
         CATALOG_PROP_NAME=fs.path
+        export GEOMESA_FS_HOME="${GEOMESA_FS_HOME:-$GEOMESA_HOME}"
         ;;
     *)
         echo "geomesa-sqlline don't know how to specify catalog property for ${GEOMESA_TOOL_NAME}." 1>&2
-        echo "Please specify datastore parameters manually using -p <params>" 1>&2
+        echo "Please specify catalog using -p <params>" 1>&2
+        echo "and make sure that GEOMESA_XXX_HOME environment variable was properly set." 1>&2
+        ;;
+esac
+
+# Load geomesa-env.sh
+if [[ -f "${GEOMESA_CONF_DIR}/geomesa-env.sh" ]]; then
+  . "${GEOMESA_CONF_DIR}/geomesa-env.sh"
+else
+  echo "ERROR: could not read '${GEOMESA_CONF_DIR}/geomesa-env.sh', aborting script" >&2
+  exit 1
+fi
+
+# Find the java binary
+if [ -n "${JAVA_HOME}" ]; then
+  RUNNER="${JAVA_HOME}/bin/java"
+else
+  if [ "$(command -v java)" ]; then
+    RUNNER="java"
+  else
+    echo "ERROR: JAVA_HOME is not set" >&2
+    exit 1
+  fi
+fi
+
+
+# setup the classpath
+function get_classpath() {
+  if [[ -n "$GEOMESA_CLASSPATH" ]]; then
+    echo "$GEOMESA_CLASSPATH"
+  else
+    local classpath="$(get_base_classpath)"
+    for file in $(ls ${GEOMESA_CONF_DIR}/*-env.sh | grep -v geomesa-env.sh); do
+      local env_cp="$(. "$file")"
+      classpath="$classpath:$(remove_slf4j_from_classpath $env_cp)"
+    done
+    classpath="$(fix_classpath_format $classpath)"
+    echo "$classpath"
+  fi
+}
+
+
+# Run sqlline
+GEOMESA_CLASSPATH="$(get_classpath):${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}"
+
+case "$1" in
+    classpath)
+        echo "$GEOMESA_CLASSPATH" | tr ':' '\n'
+        exit 1
+        ;;
+
+    debug)
+        GEOMESA_SQL_OPTS="-Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9898"
+        shift 1
         ;;
 esac
 
@@ -114,20 +169,10 @@ if [ -z "$CATALOG" ] && [ -z "$DS_PARAMS" ]; then
     usage
 fi
 
-# Find the java binary
-if [ -n "${JAVA_HOME}" ]; then
-  RUNNER="${JAVA_HOME}/bin/java"
-else
-  if [ "$(command -v java)" ]; then
-    RUNNER="java"
-  else
-    echo "ERROR: JAVA_HOME is not set" >&2
-    exit 1
-  fi
-fi
+GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dlog4j.configuration=file://${GEOMESA_CONF_DIR}/log4j.properties"
+GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dgeomesa.home=${GEOMESA_HOME}"
+GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dgeomesa.log.dir=${GEOMESA_LOG_DIR}"
 
-# Run sqlline
-GEOMESA_CLASSPATH=$(${GEOMESA_HOME}/bin/${GEOMESA_TOOL_NAME} classpath | tr '\n' ':')
 JDBC_URL="jdbc:geomesa:${CATALOG_PROP_NAME}=${CATALOG};fun=spatial;caseSensitive=false;${DS_PARAMS}"
 
 mkdir -p "${GEOMESA_LOG_DIR}"
@@ -141,12 +186,9 @@ if [ -n "$SQL" ]; then
 fi
 
 $RUNNER \
-    -Dlog4j.configuration=file://${GEOMESA_CONF_DIR}/log4j.properties \
-    -Dgeomesa.home=${GEOMESA_HOME} \
-    -Dgeomesa.log.dir=${GEOMESA_LOG_DIR} \
-    -classpath "${GEOMESA_CLASSPATH}:${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}" \
+    ${GEOMESA_SQL_OPTS} \
+    -classpath "${GEOMESA_CLASSPATH}" \
     sqlline.SqlLine \
     --verbose=true \
     --connectInteractionMode=notAskCredentials \
-    -u "$JDBC_URL" \
     "${ARGS[@]}"

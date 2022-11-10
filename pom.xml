@@ -58,6 +58,7 @@
 
     <geomesa.version>3.4.1</geomesa.version>
     <gt.version>23.3</gt.version>
+    <slf4j.version>1.7.25</slf4j.version>
 
     <!-- Accumulo dependencies for running unit test -->
     <accumulo.version>2.0.1</accumulo.version>
@@ -160,6 +161,11 @@
         <groupId>org.geotools</groupId>
         <artifactId>gt-epsg-hsql</artifactId>
         <version>${gt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
       </dependency>
 
       <!-- Apache Calcite -->
