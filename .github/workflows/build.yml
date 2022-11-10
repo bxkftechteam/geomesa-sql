@@ -85,3 +85,154 @@ jobs:
         geomesa-accumulo ingest -c geomesa.test -f beijing_subway build/smoke_test/beijing_subway.geojson --force
         geomesa-accumulo ingest -c geomesa.test -f beijing_subway_station build/smoke_test/beijing_subway_station.geojson --force
         ./geomesa-sql-dist/bin/geomesa-sqlline -c geomesa.test -f build/smoke_test/queries.sql
+
+  smoke-hbase:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scala: [2.12, 2.11]
+        geomesa: [3.4.1]
+    needs: build
+    steps:
+    - name: Allow password-less ssh to localhost
+      run: |
+        if [ ! -f "$HOME/.ssh/id_rsa.pub" ]; then
+          ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa
+        fi
+        cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: 8
+        distribution: 'temurin'
+    - uses: actions/download-artifact@v3
+      with:
+        name: geomesa-sql-dist-package-${{matrix.scala}}
+        path: ./
+    - name: Unpack the package
+      run: mkdir -p geomesa-sql-dist && tar xf geomesa-sql-dist_${{matrix.scala}}-*-bin.tar.gz --strip-components=1 -C geomesa-sql-dist
+    - name: Download hbase
+      run: wget "https://dlcdn.apache.org/hbase/2.5.1/hbase-2.5.1-bin.tar.gz" && tar xf hbase-2.5.1-bin.tar.gz
+    - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-${{matrix.geomesa}}/geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: tar xf geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - name: Setup HBase and GeoMesa coprocessor
+      run: |
+        cp -v geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}/dist/hbase/geomesa-hbase-distributed-runtime-hbase2_${{matrix.scala}}-${{matrix.geomesa}}.jar hbase-2.5.1/lib/
+        ./hbase-2.5.1/bin/start-hbase.sh
+        while ! ./hbase-2.5.1/bin/hbase hbck ; do
+          sleep 1
+        done
+    - run: |
+        export HBASE_HOME=$(pwd)/hbase-2.5.1
+        export GEOMESA_HOME=$(pwd)/geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}
+        export PATH=$HBASE_HOME/bin:$GEOMESA_HOME/bin:$PATH
+        yes | geomesa-hbase
+        geomesa-hbase ingest -c geomesa:test -f beijing_subway build/smoke_test/beijing_subway.geojson --force
+        geomesa-hbase ingest -c geomesa:test -f beijing_subway_station build/smoke_test/beijing_subway_station.geojson --force
+        ./geomesa-sql-dist/bin/geomesa-sqlline -c geomesa:test -f build/smoke_test/queries.sql
+
+  smoke-redis:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scala: [2.12, 2.11]
+        geomesa: [3.4.1]
+    needs: build
+    services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: 8
+        distribution: 'temurin'
+    - uses: actions/download-artifact@v3
+      with:
+        name: geomesa-sql-dist-package-${{matrix.scala}}
+        path: ./
+    - name: Unpack the package
+      run: mkdir -p geomesa-sql-dist && tar xf geomesa-sql-dist_${{matrix.scala}}-*-bin.tar.gz --strip-components=1 -C geomesa-sql-dist
+    - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-3.4.1/geomesa-redis_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: tar xf geomesa-redis_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: |
+        export GEOMESA_HOME=$(pwd)/geomesa-redis_${{matrix.scala}}-${{matrix.geomesa}}
+        export PATH=$GEOMESA_HOME/bin:$PATH
+        yes | geomesa-redis
+        geomesa-redis ingest -u localhost:6379 -c geomesa:test -f beijing_subway build/smoke_test/beijing_subway.geojson --force
+        geomesa-redis ingest -u localhost:6379 -c geomesa:test -f beijing_subway_station build/smoke_test/beijing_subway_station.geojson --force
+        ./geomesa-sql-dist/bin/geomesa-sqlline -c geomesa:test -p "redis.url=localhost:6379" -f build/smoke_test/queries.sql
+
+  smoke-fs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scala: [2.12, 2.11]
+        geomesa: [3.4.1]
+    needs: build
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: 8
+        distribution: 'temurin'
+    - uses: actions/download-artifact@v3
+      with:
+        name: geomesa-sql-dist-package-${{matrix.scala}}
+        path: ./
+    - name: Unpack the package
+      run: mkdir -p geomesa-sql-dist && tar xf geomesa-sql-dist_${{matrix.scala}}-*-bin.tar.gz --strip-components=1 -C geomesa-sql-dist
+    - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-3.4.1/geomesa-fs_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: tar xf geomesa-fs_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: |
+        export GEOMESA_HOME=$(pwd)/geomesa-fs_${{matrix.scala}}-${{matrix.geomesa}}
+        export PATH=$GEOMESA_HOME/bin:$PATH
+        yes | geomesa-fs
+        geomesa-fs ingest -p ./fs_store -e parquet --partition-scheme xz2-2bits -f beijing_subway build/smoke_test/beijing_subway.geojson --force
+        geomesa-fs ingest -p ./fs_store -e parquet --partition-scheme xz2-2bits -f beijing_subway_station build/smoke_test/beijing_subway_station.geojson --force
+        ./geomesa-sql-dist/bin/geomesa-sqlline -c ./fs_store -f build/smoke_test/queries.sql
+
+  smoke-cassandra:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scala: [2.12, 2.11]
+        geomesa: [3.4.1]
+    needs: build
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: 8
+        distribution: 'temurin'
+    - uses: actions/download-artifact@v3
+      with:
+        name: geomesa-sql-dist-package-${{matrix.scala}}
+        path: ./
+    - name: Unpack the package
+      run: mkdir -p geomesa-sql-dist && tar xf geomesa-sql-dist_${{matrix.scala}}-*-bin.tar.gz --strip-components=1 -C geomesa-sql-dist
+    - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-3.4.1/geomesa-cassandra_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - run: tar xf geomesa-cassandra_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
+    - name: Download cassandra
+      run: wget "https://dlcdn.apache.org/cassandra/3.11.14/apache-cassandra-3.11.14-bin.tar.gz" && tar xf apache-cassandra-3.11.14-bin.tar.gz
+    - name: Launch cassandra
+      run: |
+        ./apache-cassandra-3.11.14/bin/cassandra
+        while ! ./apache-cassandra-3.11.14/bin/cqlsh -e 'describe cluster' ; do
+          sleep 1
+        done
+    - run: |
+        export CASSANDRA_HOME=$(pwd)/apache-cassandra-3.11.14
+        export GEOMESA_HOME=$(pwd)/geomesa-cassandra_${{matrix.scala}}-${{matrix.geomesa}}
+        export PATH=$CASSANDRA_HOME/bin:$GEOMESA_HOME/bin:$PATH
+        yes | geomesa-cassandra
+        cqlsh -e "CREATE KEYSPACE geomesa WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor' : 1};"
+        geomesa-cassandra ingest -k geomesa -P localhost:9042 -c geomesa -f beijing_subway build/smoke_test/beijing_subway.geojson --force
+        geomesa-cassandra ingest -k geomesa -P localhost:9042 -c geomesa -f beijing_subway_station build/smoke_test/beijing_subway_station.geojson --force
+        ./geomesa-sql-dist/bin/geomesa-sqlline -c geomesa -p "cassandra.contact.point=localhost:9042;cassandra.keyspace=geomesa" -f build/smoke_test/queries.sql
