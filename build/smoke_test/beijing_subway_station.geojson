@@ -1,0 +1,4118 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.178945, 39.925686]
+        },
+        "properties": {
+            "stationNameZH": "苹果园",
+            "stationNameEn": "PingGuoYuan",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.162586, 39.923298]
+        },
+        "properties": {
+            "stationNameZH": "金安桥",
+            "stationNameEn": "JinAn Qiao",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.13401, 39.91603]
+        },
+        "properties": {
+            "stationNameZH": "四道桥",
+            "stationNameEn": "si dao qiao",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.125809, 39.912383]
+        },
+        "properties": {
+            "stationNameZH": "桥户营",
+            "stationNameEn": "qiao hu ying",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.122225, 39.905138]
+        },
+        "properties": {
+            "stationNameZH": "上岸",
+            "stationNameEn": "shang an",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.123254, 39.89578]
+        },
+        "properties": {
+            "stationNameZH": "栗园庄",
+            "stationNameEn": "li yuan zhuang",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.114443, 39.890465]
+        },
+        "properties": {
+            "stationNameZH": "小园",
+            "stationNameEn": "xiao yuan",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.100334, 39.889378]
+        },
+        "properties": {
+            "stationNameZH": "石厂",
+            "stationNameEn": "shi chang",
+            "line": "S1线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.190337, 39.90745]
+        },
+        "properties": {
+            "stationNameZH": "古城",
+            "stationNameEn": "gu cheng",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.212684, 39.907442]
+        },
+        "properties": {
+            "stationNameZH": "八角游乐园",
+            "stationNameEn": "ba jiao you le yuan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.235948, 39.90744]
+        },
+        "properties": {
+            "stationNameZH": "八宝山",
+            "stationNameEn": "ba bao shan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.252888, 39.907433]
+        },
+        "properties": {
+            "stationNameZH": "玉泉路",
+            "stationNameEn": "yu quan lu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.273987, 39.907456]
+        },
+        "properties": {
+            "stationNameZH": "五棵松",
+            "stationNameEn": "wu ke song",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.294765, 39.907474]
+        },
+        "properties": {
+            "stationNameZH": "万寿路",
+            "stationNameEn": "wan shou lu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.309919, 39.907469]
+        },
+        "properties": {
+            "stationNameZH": "公主坟",
+            "stationNameEn": "gong zhu fen",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.321459, 39.907422]
+        },
+        "properties": {
+            "stationNameZH": "军事博物馆",
+            "stationNameEn": "jun shi bo wu guan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.337583, 39.907379]
+        },
+        "properties": {
+            "stationNameZH": "木樨地",
+            "stationNameEn": "mu xi di",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.352583, 39.907234]
+        },
+        "properties": {
+            "stationNameZH": "南礼士路",
+            "stationNameEn": "nan li shi lu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.356866, 39.907242]
+        },
+        "properties": {
+            "stationNameZH": "复兴门",
+            "stationNameEn": "fu xing men",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.374072, 39.907383]
+        },
+        "properties": {
+            "stationNameZH": "西单",
+            "stationNameEn": "xi dan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.391278, 39.907472]
+        },
+        "properties": {
+            "stationNameZH": "天安门西",
+            "stationNameEn": "tian an men xi",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.401216, 39.90778]
+        },
+        "properties": {
+            "stationNameZH": "天安门东",
+            "stationNameEn": "tian an men dong",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.411571, 39.908069]
+        },
+        "properties": {
+            "stationNameZH": "王府井",
+            "stationNameEn": "WangFuJing",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.41848, 39.908325]
+        },
+        "properties": {
+            "stationNameZH": "东单",
+            "stationNameEn": "dong dan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.435806, 39.908501]
+        },
+        "properties": {
+            "stationNameZH": "建国门",
+            "stationNameEn": "jian guo men",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.450497, 39.908454]
+        },
+        "properties": {
+            "stationNameZH": "永安里",
+            "stationNameEn": "yong an li",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461841, 39.909104]
+        },
+        "properties": {
+            "stationNameZH": "国贸",
+            "stationNameEn": "guo mao",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.475783, 39.908287]
+        },
+        "properties": {
+            "stationNameZH": "大望路",
+            "stationNameEn": "DaWang Lu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.495456, 39.908749]
+        },
+        "properties": {
+            "stationNameZH": "四惠",
+            "stationNameEn": "SiHui",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.515664, 39.908495]
+        },
+        "properties": {
+            "stationNameZH": "四惠东",
+            "stationNameEn": "Si HuiDong",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.531421, 39.909448]
+        },
+        "properties": {
+            "stationNameZH": "高碑店",
+            "stationNameEn": "GaoBeiDian",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.554639, 39.909215]
+        },
+        "properties": {
+            "stationNameZH": "传媒大学",
+            "stationNameEn": "ChuanMei DaXue",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.57676, 39.91014]
+        },
+        "properties": {
+            "stationNameZH": "双桥",
+            "stationNameEn": "ShuangQiao",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.599002, 39.90909]
+        },
+        "properties": {
+            "stationNameZH": "管庄",
+            "stationNameEn": "GuanZhuang",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.618658, 39.906121]
+        },
+        "properties": {
+            "stationNameZH": "八里桥",
+            "stationNameEn": "BaLiQiao",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.637252, 39.903864]
+        },
+        "properties": {
+            "stationNameZH": "通州北苑",
+            "stationNameEn": "TongZhouBeiYuan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.646621, 39.893329]
+        },
+        "properties": {
+            "stationNameZH": "果园",
+            "stationNameEn": "GuoYuan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.657533, 39.890278]
+        },
+        "properties": {
+            "stationNameZH": "九棵树",
+            "stationNameEn": "JiuKeShu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.66872, 39.883677]
+        },
+        "properties": {
+            "stationNameZH": "梨园",
+            "stationNameEn": "LiYuan",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.678811, 39.875496]
+        },
+        "properties": {
+            "stationNameZH": "临河里",
+            "stationNameEn": "LinHeLi",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.686349, 39.871926]
+        },
+        "properties": {
+            "stationNameZH": "土桥",
+            "stationNameEn": "TuQiao",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.695495, 39.856722]
+        },
+        "properties": {
+            "stationNameZH": "花庄",
+            "stationNameEn": "HuaZhuang",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.679099, 39.849152]
+        },
+        "properties": {
+            "stationNameZH": "环球度假区",
+            "stationNameEn": "HuanQiu DuJiaQu",
+            "line": "地铁1号线(八通线)"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.373126, 39.948653]
+        },
+        "properties": {
+            "stationNameZH": "积水潭",
+            "stationNameEn": "JiShuiTan",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.393776, 39.948972]
+        },
+        "properties": {
+            "stationNameZH": "鼓楼大街",
+            "stationNameEn": "gu lou da jie",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.40824, 39.94918]
+        },
+        "properties": {
+            "stationNameZH": "安定门",
+            "stationNameEn": "an ding men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417069, 39.949336]
+        },
+        "properties": {
+            "stationNameZH": "雍和宫",
+            "stationNameEn": "yong he gong",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.435842, 39.941626]
+        },
+        "properties": {
+            "stationNameZH": "东直门",
+            "stationNameEn": "dong zhi men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.434133, 39.933801]
+        },
+        "properties": {
+            "stationNameZH": "东四十条",
+            "stationNameEn": "dong si shi tiao",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.434584, 39.924499]
+        },
+        "properties": {
+            "stationNameZH": "朝阳门",
+            "stationNameEn": "zhao yang men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.427287, 39.904983]
+        },
+        "properties": {
+            "stationNameZH": "北京站",
+            "stationNameEn": "bei jing zhan",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417093, 39.901063]
+        },
+        "properties": {
+            "stationNameZH": "崇文门",
+            "stationNameEn": "chong wen men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.397937, 39.900192]
+        },
+        "properties": {
+            "stationNameZH": "前门",
+            "stationNameEn": "QianMen",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.384209, 39.900098]
+        },
+        "properties": {
+            "stationNameZH": "和平门",
+            "stationNameEn": "he ping men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.374314, 39.899765]
+        },
+        "properties": {
+            "stationNameZH": "宣武门",
+            "stationNameEn": "xuan wu men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.363355, 39.899433]
+        },
+        "properties": {
+            "stationNameZH": "长椿街",
+            "stationNameEn": "chang chun jie",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.356009, 39.923686]
+        },
+        "properties": {
+            "stationNameZH": "阜成门",
+            "stationNameEn": "FuChengMen",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.354357, 39.932397]
+        },
+        "properties": {
+            "stationNameZH": "车公庄",
+            "stationNameEn": "che gong zhuang",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.355426, 39.940474]
+        },
+        "properties": {
+            "stationNameZH": "西直门",
+            "stationNameEn": "xi zhi men",
+            "line": "地铁2号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.319932, 39.670342]
+        },
+        "properties": {
+            "stationNameZH": "天宫院",
+            "stationNameEn": "tian gong yuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.321662, 39.68651]
+        },
+        "properties": {
+            "stationNameZH": "生物医药基地",
+            "stationNameEn": "sheng wu yi yao ji di",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.319079, 39.712387]
+        },
+        "properties": {
+            "stationNameZH": "义和庄",
+            "stationNameEn": "yi he zhuang",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.332611, 39.722966]
+        },
+        "properties": {
+            "stationNameZH": "黄村火车站",
+            "stationNameEn": "huang cun huo che zhan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.332631, 39.731769]
+        },
+        "properties": {
+            "stationNameZH": "黄村西大街",
+            "stationNameEn": "huang cun xi da jie",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.332513, 39.742724]
+        },
+        "properties": {
+            "stationNameZH": "清源路",
+            "stationNameEn": "qing yuan lu",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.332204, 39.753458]
+        },
+        "properties": {
+            "stationNameZH": "枣园",
+            "stationNameEn": "zao yuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.331605, 39.763489]
+        },
+        "properties": {
+            "stationNameZH": "高米店南",
+            "stationNameEn": "gao mi dian nan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.330787, 39.773547]
+        },
+        "properties": {
+            "stationNameZH": "高米店北",
+            "stationNameEn": "gao mi dian bei",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.328689, 39.7898]
+        },
+        "properties": {
+            "stationNameZH": "西红门",
+            "stationNameEn": "xi hong men",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.365549, 39.812592]
+        },
+        "properties": {
+            "stationNameZH": "新宫",
+            "stationNameEn": "XinGong",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.370796, 39.836135]
+        },
+        "properties": {
+            "stationNameZH": "公益西桥",
+            "stationNameEn": "gong yi xi qiao",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.371154, 39.84585]
+        },
+        "properties": {
+            "stationNameZH": "角门西",
+            "stationNameEn": "jiao men xi",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.371361, 39.853109]
+        },
+        "properties": {
+            "stationNameZH": "马家堡",
+            "stationNameEn": "ma jia bao",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.378963, 39.865029]
+        },
+        "properties": {
+            "stationNameZH": "北京南站",
+            "stationNameEn": "BeiJing NanZhan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.374383, 39.87847]
+        },
+        "properties": {
+            "stationNameZH": "陶然亭",
+            "stationNameEn": "tao ran ting",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.374425, 39.889296]
+        },
+        "properties": {
+            "stationNameZH": "菜市口",
+            "stationNameEn": "cai shi kou",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.373746, 39.915912]
+        },
+        "properties": {
+            "stationNameZH": "灵境胡同",
+            "stationNameEn": "ling jing hu tong",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.373332, 39.924206]
+        },
+        "properties": {
+            "stationNameZH": "西四",
+            "stationNameEn": "xi si",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.372883, 39.933949]
+        },
+        "properties": {
+            "stationNameZH": "平安里",
+            "stationNameEn": "ping an li",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.367742, 39.940667]
+        },
+        "properties": {
+            "stationNameZH": "新街口",
+            "stationNameEn": "xin jie kou",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.339031, 39.93825]
+        },
+        "properties": {
+            "stationNameZH": "动物园",
+            "stationNameEn": "dong wu yuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.32519, 39.943114]
+        },
+        "properties": {
+            "stationNameZH": "国家图书馆",
+            "stationNameEn": "GuoJia TuShuGuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.32322, 39.957904]
+        },
+        "properties": {
+            "stationNameZH": "魏公村",
+            "stationNameEn": "wei gong cun",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.321367, 39.966956]
+        },
+        "properties": {
+            "stationNameZH": "人民大学",
+            "stationNameEn": "ren min da xue",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.317564, 39.975996]
+        },
+        "properties": {
+            "stationNameZH": "海淀黄庄",
+            "stationNameEn": "hai dian huang zhuang",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.316467, 39.983991]
+        },
+        "properties": {
+            "stationNameZH": "中关村",
+            "stationNameEn": "zhong guan cun",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.315842, 39.992212]
+        },
+        "properties": {
+            "stationNameZH": "北京大学东门",
+            "stationNameEn": "bei jing da xue dong men",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.310186, 39.999662]
+        },
+        "properties": {
+            "stationNameZH": "圆明园",
+            "stationNameEn": "yuan ming yuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.290908, 39.998258]
+        },
+        "properties": {
+            "stationNameZH": "西苑",
+            "stationNameEn": "xi yuan",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.277647, 40.002373]
+        },
+        "properties": {
+            "stationNameZH": "北宫门",
+            "stationNameEn": "bei gong men",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.269956, 40.012195]
+        },
+        "properties": {
+            "stationNameZH": "安河桥北",
+            "stationNameEn": "an he qiao bei",
+            "line": "地铁4号线大兴线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.428368, 39.845849]
+        },
+        "properties": {
+            "stationNameZH": "宋家庄",
+            "stationNameEn": "song jia zhuang",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.422119, 39.857521]
+        },
+        "properties": {
+            "stationNameZH": "刘家窑",
+            "stationNameEn": "liu jia yao",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.42372, 39.865621]
+        },
+        "properties": {
+            "stationNameZH": "蒲黄榆",
+            "stationNameEn": "PuHuangYu",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.420833, 39.882558]
+        },
+        "properties": {
+            "stationNameZH": "天坛东门",
+            "stationNameEn": "tian tan dong men",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.41994, 39.893172]
+        },
+        "properties": {
+            "stationNameZH": "磁器口",
+            "stationNameEn": "ci qi kou",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417783, 39.917113]
+        },
+        "properties": {
+            "stationNameZH": "灯市口",
+            "stationNameEn": "deng shi kou",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417493, 39.92437]
+        },
+        "properties": {
+            "stationNameZH": "东四",
+            "stationNameEn": "dong si",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417156, 39.933592]
+        },
+        "properties": {
+            "stationNameZH": "张自忠路",
+            "stationNameEn": "zhang zi zhong lu",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.416884, 39.940782]
+        },
+        "properties": {
+            "stationNameZH": "北新桥",
+            "stationNameEn": "BeiXinQiao",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.418504, 39.958734]
+        },
+        "properties": {
+            "stationNameZH": "和平里北街",
+            "stationNameEn": "he ping li bei jie",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417975, 39.968386]
+        },
+        "properties": {
+            "stationNameZH": "和平西桥",
+            "stationNameEn": "he ping xi qiao",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417537, 39.977121]
+        },
+        "properties": {
+            "stationNameZH": "惠新西街南口",
+            "stationNameEn": "hui xin xi jie nan kou",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417028, 39.987836]
+        },
+        "properties": {
+            "stationNameZH": "惠新西街北口",
+            "stationNameEn": "hui xin xi jie bei kou",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.417377, 40.003841]
+        },
+        "properties": {
+            "stationNameZH": "大屯路东",
+            "stationNameEn": "da tun lu dong",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.418089, 40.030436]
+        },
+        "properties": {
+            "stationNameZH": "北苑路北",
+            "stationNameEn": "bei yuan lu bei",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.414496, 40.041956]
+        },
+        "properties": {
+            "stationNameZH": "立水桥南",
+            "stationNameEn": "li shui qiao nan",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.41235, 40.053032]
+        },
+        "properties": {
+            "stationNameZH": "立水桥",
+            "stationNameEn": "li shui qiao",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.412661, 40.066458]
+        },
+        "properties": {
+            "stationNameZH": "天通苑南",
+            "stationNameEn": "tian tong yuan nan",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.412759, 40.075222]
+        },
+        "properties": {
+            "stationNameZH": "天通苑",
+            "stationNameEn": "tian tong yuan",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.412888, 40.083668]
+        },
+        "properties": {
+            "stationNameZH": "天通苑北",
+            "stationNameEn": "tian tong yuan bei",
+            "line": "地铁5号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.747434, 39.902652]
+        },
+        "properties": {
+            "stationNameZH": "潞城",
+            "stationNameEn": "lu cheng",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.73385, 39.903147]
+        },
+        "properties": {
+            "stationNameZH": "东夏园",
+            "stationNameEn": "dong xia yuan",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.717826, 39.903195]
+        },
+        "properties": {
+            "stationNameZH": "郝家府",
+            "stationNameEn": "hao jia fu",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.707056, 39.903268]
+        },
+        "properties": {
+            "stationNameZH": "北运河东",
+            "stationNameEn": "bei yun he dong",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.688358, 39.903024]
+        },
+        "properties": {
+            "stationNameZH": "北运河西",
+            "stationNameEn": "bei yun he xi",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.661131, 39.917962]
+        },
+        "properties": {
+            "stationNameZH": "通州北关",
+            "stationNameEn": "tong zhou bei guan",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.639316, 39.926801]
+        },
+        "properties": {
+            "stationNameZH": "物资学院路",
+            "stationNameEn": "wu zi xue yuan lu",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.615574, 39.924477]
+        },
+        "properties": {
+            "stationNameZH": "草房",
+            "stationNameEn": "cao fang",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.599722, 39.925696]
+        },
+        "properties": {
+            "stationNameZH": "常营",
+            "stationNameEn": "chang ying",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.578266, 39.924201]
+        },
+        "properties": {
+            "stationNameZH": "黄渠",
+            "stationNameEn": "huang qu",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.563961, 39.924021]
+        },
+        "properties": {
+            "stationNameZH": "褡裢坡",
+            "stationNameEn": "da lian po",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.517429, 39.923168]
+        },
+        "properties": {
+            "stationNameZH": "青年路",
+            "stationNameEn": "qing nian lu",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.502045, 39.923076]
+        },
+        "properties": {
+            "stationNameZH": "十里堡",
+            "stationNameEn": "shi li bao",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.478115, 39.923556]
+        },
+        "properties": {
+            "stationNameZH": "金台路",
+            "stationNameEn": "JinTai Lu",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461618, 39.923337]
+        },
+        "properties": {
+            "stationNameZH": "呼家楼",
+            "stationNameEn": "hu jia lou",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.451657, 39.923054]
+        },
+        "properties": {
+            "stationNameZH": "东大桥",
+            "stationNameEn": "dong da qiao",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.404192, 39.933848]
+        },
+        "properties": {
+            "stationNameZH": "南锣鼓巷",
+            "stationNameEn": "nan luo gu xiang",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.386829, 39.933247]
+        },
+        "properties": {
+            "stationNameZH": "北海北",
+            "stationNameEn": "bei hai bei",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.344082, 39.932466]
+        },
+        "properties": {
+            "stationNameZH": "车公庄西",
+            "stationNameEn": "che gong zhuang xi",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.32568, 39.933022]
+        },
+        "properties": {
+            "stationNameZH": "白石桥南",
+            "stationNameEn": "bai shi qiao nan",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.310683, 39.93234]
+        },
+        "properties": {
+            "stationNameZH": "花园桥",
+            "stationNameEn": "hua yuan qiao",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.295467, 39.933268]
+        },
+        "properties": {
+            "stationNameZH": "慈寿寺",
+            "stationNameEn": "ci shou si",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.276531, 39.932584]
+        },
+        "properties": {
+            "stationNameZH": "海淀五路居",
+            "stationNameEn": "hai dian wu lu ju",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.252914, 39.929503]
+        },
+        "properties": {
+            "stationNameZH": "田村",
+            "stationNameEn": "tian cun",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.227292, 39.932422]
+        },
+        "properties": {
+            "stationNameZH": "廖公庄",
+            "stationNameEn": "liao gong zhuang",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.206932, 39.933605]
+        },
+        "properties": {
+            "stationNameZH": "西黄村",
+            "stationNameEn": "xi huang cun",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.187004, 39.92785]
+        },
+        "properties": {
+            "stationNameZH": "杨庄",
+            "stationNameEn": "yang zhuang",
+            "line": "地铁6号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.68434, 39.863154]
+        },
+        "properties": {
+            "stationNameZH": "高楼金",
+            "stationNameEn": "GaoLouJin",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.670792, 39.863515]
+        },
+        "properties": {
+            "stationNameZH": "群芳",
+            "stationNameEn": "QunFang",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.657379, 39.863491]
+        },
+        "properties": {
+            "stationNameZH": "万盛东",
+            "stationNameEn": "WanShengDong",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.63216, 39.863328]
+        },
+        "properties": {
+            "stationNameZH": "万盛西",
+            "stationNameEn": "WanShengXi",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.599119, 39.858725]
+        },
+        "properties": {
+            "stationNameZH": "黑庄户",
+            "stationNameEn": "HeiZhuangHu",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.569826, 39.856496]
+        },
+        "properties": {
+            "stationNameZH": "郎辛庄",
+            "stationNameEn": "Lang XinZhuang",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.553759, 39.848979]
+        },
+        "properties": {
+            "stationNameZH": "黄厂",
+            "stationNameEn": "HuangChang",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.537247, 39.855488]
+        },
+        "properties": {
+            "stationNameZH": "焦化厂",
+            "stationNameEn": "jiao hua chang",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.526836, 39.859691]
+        },
+        "properties": {
+            "stationNameZH": "双合",
+            "stationNameEn": "shuang he",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.511821, 39.860728]
+        },
+        "properties": {
+            "stationNameZH": "垡头",
+            "stationNameEn": "fa tou",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.500067, 39.866505]
+        },
+        "properties": {
+            "stationNameZH": "欢乐谷景区",
+            "stationNameEn": "huan le gu jing qu",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.501084, 39.874578]
+        },
+        "properties": {
+            "stationNameZH": "南楼梓庄",
+            "stationNameEn": "nan lou zi zhuang",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.503439, 39.887369]
+        },
+        "properties": {
+            "stationNameZH": "化工",
+            "stationNameEn": "hua gong",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.497768, 39.89253]
+        },
+        "properties": {
+            "stationNameZH": "百子湾",
+            "stationNameEn": "bai zi wan",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.487935, 39.893183]
+        },
+        "properties": {
+            "stationNameZH": "大郊亭",
+            "stationNameEn": "da jiao ting",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.478695, 39.893222]
+        },
+        "properties": {
+            "stationNameZH": "九龙山",
+            "stationNameEn": "JiuLongShan",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461834, 39.893512]
+        },
+        "properties": {
+            "stationNameZH": "双井",
+            "stationNameEn": "ShuangJing",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.448998, 39.893648]
+        },
+        "properties": {
+            "stationNameZH": "广渠门外",
+            "stationNameEn": "guang qu men wai",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.433877, 39.893673]
+        },
+        "properties": {
+            "stationNameZH": "广渠门内",
+            "stationNameEn": "guang qu men nei",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.408464, 39.892725]
+        },
+        "properties": {
+            "stationNameZH": "桥湾",
+            "stationNameEn": "qiao wan",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.398372, 39.891334]
+        },
+        "properties": {
+            "stationNameZH": "珠市口",
+            "stationNameEn": "ZhuShiKou",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.384596, 39.889486]
+        },
+        "properties": {
+            "stationNameZH": "虎坊桥",
+            "stationNameEn": "hu fang qiao",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.358239, 39.889418]
+        },
+        "properties": {
+            "stationNameZH": "广安门内",
+            "stationNameEn": "guang an men nei",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.336455, 39.889884]
+        },
+        "properties": {
+            "stationNameZH": "达官营",
+            "stationNameEn": "da guan ying",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.327753, 39.889954]
+        },
+        "properties": {
+            "stationNameZH": "湾子",
+            "stationNameEn": "wan zi",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.321218, 39.894706]
+        },
+        "properties": {
+            "stationNameZH": "北京西站",
+            "stationNameEn": "bei jing xi zhan",
+            "line": "地铁7号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.448982, 39.760713]
+        },
+        "properties": {
+            "stationNameZH": "瀛海",
+            "stationNameEn": "YingHai",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.441467, 39.772649]
+        },
+        "properties": {
+            "stationNameZH": "德茂",
+            "stationNameEn": "DeMao",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.423903, 39.785046]
+        },
+        "properties": {
+            "stationNameZH": "五福堂",
+            "stationNameEn": "WuFu Tang",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.418627, 39.799287]
+        },
+        "properties": {
+            "stationNameZH": "火箭万源",
+            "stationNameEn": "HuoJian WanYuan",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.409427, 39.805074]
+        },
+        "properties": {
+            "stationNameZH": "东高地",
+            "stationNameEn": "DongGaoDi",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.402073, 39.814838]
+        },
+        "properties": {
+            "stationNameZH": "和义",
+            "stationNameEn": "HeYi",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.401045, 39.836715]
+        },
+        "properties": {
+            "stationNameZH": "大红门南",
+            "stationNameEn": "DaHongMen Nan",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.400301, 39.851805]
+        },
+        "properties": {
+            "stationNameZH": "海户屯",
+            "stationNameEn": "HaiHuTun",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.399839, 39.859262]
+        },
+        "properties": {
+            "stationNameZH": "木樨园",
+            "stationNameEn": "MuXiYuan",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.399369, 39.867435]
+        },
+        "properties": {
+            "stationNameZH": "永定门外",
+            "stationNameEn": "YongDing MenWai",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.398712, 39.88192]
+        },
+        "properties": {
+            "stationNameZH": "天桥",
+            "stationNameEn": "TianQiao",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.411178, 39.915387]
+        },
+        "properties": {
+            "stationNameZH": "金鱼胡同",
+            "stationNameEn": "JinYu HuTong",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.410803, 39.923705]
+        },
+        "properties": {
+            "stationNameZH": "中国美术馆",
+            "stationNameEn": "zhong guo mei shu guan",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.396219, 39.937583]
+        },
+        "properties": {
+            "stationNameZH": "什刹海",
+            "stationNameEn": "shi cha hai",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.395145, 39.957227]
+        },
+        "properties": {
+            "stationNameZH": "安德里北街",
+            "stationNameEn": "an de li bei jie",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.394655, 39.968507]
+        },
+        "properties": {
+            "stationNameZH": "安华桥",
+            "stationNameEn": "an hua qiao",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.394193, 39.976953]
+        },
+        "properties": {
+            "stationNameZH": "北土城",
+            "stationNameEn": "bei tu cheng",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.393759, 39.985837]
+        },
+        "properties": {
+            "stationNameZH": "奥体中心",
+            "stationNameEn": "ao ti zhong xin",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.391758, 40.002207]
+        },
+        "properties": {
+            "stationNameZH": "奥林匹克公园",
+            "stationNameEn": "ao lin pi ke gong yuan",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.3926, 40.010122]
+        },
+        "properties": {
+            "stationNameZH": "森林公园南门",
+            "stationNameEn": "sen lin gong yuan nan men",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.372998, 40.021906]
+        },
+        "properties": {
+            "stationNameZH": "林萃桥",
+            "stationNameEn": "lin cui qiao",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.35458, 40.037728]
+        },
+        "properties": {
+            "stationNameZH": "永泰庄",
+            "stationNameEn": "yong tai zhuang",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.351644, 40.046873]
+        },
+        "properties": {
+            "stationNameZH": "西小口",
+            "stationNameEn": "xi xiao kou",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.347328, 40.060039]
+        },
+        "properties": {
+            "stationNameZH": "育新",
+            "stationNameEn": "yu xin",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.360286, 40.071857]
+        },
+        "properties": {
+            "stationNameZH": "霍营",
+            "stationNameEn": "HuoYing",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.363025, 40.081175]
+        },
+        "properties": {
+            "stationNameZH": "回龙观东大街",
+            "stationNameEn": "hui long guan dong da jie",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.350425, 40.090607]
+        },
+        "properties": {
+            "stationNameZH": "平西府",
+            "stationNameEn": "ping xi fu",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.326992, 40.087863]
+        },
+        "properties": {
+            "stationNameZH": "育知路",
+            "stationNameEn": "yu zhi lu",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.313698, 40.104297]
+        },
+        "properties": {
+            "stationNameZH": "朱辛庄",
+            "stationNameEn": "zhu xin zhuang",
+            "line": "地铁8号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.398712, 39.88192]
+        },
+        "properties": {
+            "stationNameZH": "天桥",
+            "stationNameEn": "tian qiao",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.399839, 39.859262]
+        },
+        "properties": {
+            "stationNameZH": "木樨园",
+            "stationNameEn": "mu xi yuan",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.400301, 39.851805]
+        },
+        "properties": {
+            "stationNameZH": "海户屯",
+            "stationNameEn": "hai hu tun",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.401045, 39.836715]
+        },
+        "properties": {
+            "stationNameZH": "大红门南",
+            "stationNameEn": "da hong men nan",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.402073, 39.814838]
+        },
+        "properties": {
+            "stationNameZH": "和义",
+            "stationNameEn": "he yi",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.409427, 39.805074]
+        },
+        "properties": {
+            "stationNameZH": "东高地",
+            "stationNameEn": "dong gao di",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.418627, 39.799287]
+        },
+        "properties": {
+            "stationNameZH": "火箭万源",
+            "stationNameEn": "huo jian wan yuan",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.423903, 39.785046]
+        },
+        "properties": {
+            "stationNameZH": "五福堂",
+            "stationNameEn": "wu fu tang",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.441617, 39.772709]
+        },
+        "properties": {
+            "stationNameZH": "德茂",
+            "stationNameEn": "de mao",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.448958, 39.760694]
+        },
+        "properties": {
+            "stationNameZH": "瀛海",
+            "stationNameEn": "ying hai",
+            "line": "地铁8号线南段"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.301889, 39.814322]
+        },
+        "properties": {
+            "stationNameZH": "郭公庄",
+            "stationNameEn": "GuoGongZhuang",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.297176, 39.825233]
+        },
+        "properties": {
+            "stationNameZH": "丰台科技园",
+            "stationNameEn": "feng tai ke ji yuan",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.297432, 39.83248]
+        },
+        "properties": {
+            "stationNameZH": "科怡路",
+            "stationNameEn": "ke yi lu",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.296748, 39.840444]
+        },
+        "properties": {
+            "stationNameZH": "丰台南路",
+            "stationNameEn": "feng tai nan lu",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.293857, 39.855111]
+        },
+        "properties": {
+            "stationNameZH": "丰台东大街",
+            "stationNameEn": "feng tai dong da jie",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.294292, 39.866773]
+        },
+        "properties": {
+            "stationNameZH": "七里庄",
+            "stationNameEn": "QiLiZhuang",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.302808, 39.880239]
+        },
+        "properties": {
+            "stationNameZH": "六里桥",
+            "stationNameEn": "liu li qiao",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.315142, 39.886886]
+        },
+        "properties": {
+            "stationNameZH": "六里桥东",
+            "stationNameEn": "liu li qiao dong",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.325762, 39.923818]
+        },
+        "properties": {
+            "stationNameZH": "白堆子",
+            "stationNameEn": "bai dui zi",
+            "line": "地铁9号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.293727, 39.974179]
+        },
+        "properties": {
+            "stationNameZH": "巴沟",
+            "stationNameEn": "ba gou",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.306332, 39.975642]
+        },
+        "properties": {
+            "stationNameZH": "苏州街",
+            "stationNameEn": "su zhou jie",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.328709, 39.976334]
+        },
+        "properties": {
+            "stationNameZH": "知春里",
+            "stationNameEn": "zhi chun li",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.33996, 39.976476]
+        },
+        "properties": {
+            "stationNameZH": "知春路",
+            "stationNameEn": "zhi chun lu",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.354098, 39.976549]
+        },
+        "properties": {
+            "stationNameZH": "西土城",
+            "stationNameEn": "xi tu cheng",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.369844, 39.976603]
+        },
+        "properties": {
+            "stationNameZH": "牡丹园",
+            "stationNameEn": "MuDanYuan",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.381353, 39.976723]
+        },
+        "properties": {
+            "stationNameZH": "健德门",
+            "stationNameEn": "jian de men",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.405954, 39.977005]
+        },
+        "properties": {
+            "stationNameZH": "安贞门",
+            "stationNameEn": "an zhen men",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.435914, 39.977636]
+        },
+        "properties": {
+            "stationNameZH": "芍药居",
+            "stationNameEn": "shao yao ju",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.447469, 39.972678]
+        },
+        "properties": {
+            "stationNameZH": "太阳宫",
+            "stationNameEn": "tai yang gong",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.456997, 39.961508]
+        },
+        "properties": {
+            "stationNameZH": "三元桥",
+            "stationNameEn": "san yuan qiao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461794, 39.949415]
+        },
+        "properties": {
+            "stationNameZH": "亮马桥",
+            "stationNameEn": "liang ma qiao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461724, 39.941344]
+        },
+        "properties": {
+            "stationNameZH": "农业展览馆",
+            "stationNameEn": "nong ye zhan lan guan",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461806, 39.933747]
+        },
+        "properties": {
+            "stationNameZH": "团结湖",
+            "stationNameEn": "tuan jie hu",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461743, 39.916838]
+        },
+        "properties": {
+            "stationNameZH": "金台夕照",
+            "stationNameEn": "jin tai xi zhao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.461325, 39.884387]
+        },
+        "properties": {
+            "stationNameZH": "劲松",
+            "stationNameEn": "jin song",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.460926, 39.875387]
+        },
+        "properties": {
+            "stationNameZH": "潘家园",
+            "stationNameEn": "pan jia yuan",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.457983, 39.866417]
+        },
+        "properties": {
+            "stationNameZH": "十里河",
+            "stationNameEn": "ShiLiHe",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.453976, 39.852227]
+        },
+        "properties": {
+            "stationNameZH": "分钟寺",
+            "stationNameEn": "fen zhong si",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.447531, 39.845874]
+        },
+        "properties": {
+            "stationNameZH": "成寿寺",
+            "stationNameEn": "cheng shou si",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.414103, 39.845905]
+        },
+        "properties": {
+            "stationNameZH": "石榴庄",
+            "stationNameEn": "shi liu zhuang",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.399154, 39.845383]
+        },
+        "properties": {
+            "stationNameZH": "大红门",
+            "stationNameEn": "da hong men",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.385649, 39.845135]
+        },
+        "properties": {
+            "stationNameZH": "角门东",
+            "stationNameEn": "jiao men dong",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.351387, 39.845869]
+        },
+        "properties": {
+            "stationNameZH": "草桥",
+            "stationNameEn": "CaoQiao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.333381, 39.844433]
+        },
+        "properties": {
+            "stationNameZH": "纪家庙",
+            "stationNameEn": "ji jia miao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.320202, 39.844463]
+        },
+        "properties": {
+            "stationNameZH": "首经贸",
+            "stationNameEn": "ShouJingMao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.30454, 39.849639]
+        },
+        "properties": {
+            "stationNameZH": "丰台站",
+            "stationNameEn": "feng tai zhan",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.304173, 39.858609]
+        },
+        "properties": {
+            "stationNameZH": "泥洼",
+            "stationNameEn": "ni wa",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.303819, 39.86677]
+        },
+        "properties": {
+            "stationNameZH": "西局",
+            "stationNameEn": "XiJu",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.310347, 39.897867]
+        },
+        "properties": {
+            "stationNameZH": "莲花桥",
+            "stationNameEn": "lian hua qiao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.298064, 39.923481]
+        },
+        "properties": {
+            "stationNameZH": "西钓鱼台",
+            "stationNameEn": "xi diao yu tai",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.293818, 39.947923]
+        },
+        "properties": {
+            "stationNameZH": "车道沟",
+            "stationNameEn": "che dao gou",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.294255, 39.958527]
+        },
+        "properties": {
+            "stationNameZH": "长春桥",
+            "stationNameEn": "chang chun qiao",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.289058, 39.965938]
+        },
+        "properties": {
+            "stationNameZH": "火器营",
+            "stationNameEn": "huo qi ying",
+            "line": "地铁10号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.164755, 39.915456]
+        },
+        "properties": {
+            "stationNameZH": "北辛安",
+            "stationNameEn": "BeiXinAn",
+            "line": "地铁11号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.164806, 39.90961]
+        },
+        "properties": {
+            "stationNameZH": "新首钢",
+            "stationNameEn": "XinShouGang",
+            "line": "地铁11号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.345139, 39.966612]
+        },
+        "properties": {
+            "stationNameZH": "大钟寺",
+            "stationNameEn": "da zhong si",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.337742, 39.992894]
+        },
+        "properties": {
+            "stationNameZH": "五道口",
+            "stationNameEn": "wu dao kou",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.320193, 40.033007]
+        },
+        "properties": {
+            "stationNameZH": "上地",
+            "stationNameEn": "shang di",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.314961, 40.041164]
+        },
+        "properties": {
+            "stationNameZH": "清河站",
+            "stationNameEn": "QingHe Zhan",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.306295, 40.053034]
+        },
+        "properties": {
+            "stationNameZH": "西二旗",
+            "stationNameEn": "XiErQi",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.319429, 40.070882]
+        },
+        "properties": {
+            "stationNameZH": "龙泽",
+            "stationNameEn": "long ze",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.336116, 40.0708]
+        },
+        "properties": {
+            "stationNameZH": "回龙观",
+            "stationNameEn": "hui long guan",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.434518, 40.042997]
+        },
+        "properties": {
+            "stationNameZH": "北苑",
+            "stationNameEn": "bei yuan",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.449884, 39.995724]
+        },
+        "properties": {
+            "stationNameZH": "望京西",
+            "stationNameEn": "wang jing xi",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.431761, 39.968337]
+        },
+        "properties": {
+            "stationNameZH": "光熙门",
+            "stationNameEn": "guang xi men",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.432728, 39.958157]
+        },
+        "properties": {
+            "stationNameZH": "柳芳",
+            "stationNameEn": "liu fang",
+            "line": "地铁13号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.478195, 40.02716]
+        },
+        "properties": {
+            "stationNameZH": "善各庄",
+            "stationNameEn": "ShanGeZhuang",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.466994, 40.020588]
+        },
+        "properties": {
+            "stationNameZH": "来广营",
+            "stationNameEn": "LaiGuangYing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.467412, 40.01067]
+        },
+        "properties": {
+            "stationNameZH": "东湖渠",
+            "stationNameEn": "DongHu Qu",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.469409, 39.998521]
+        },
+        "properties": {
+            "stationNameZH": "望京",
+            "stationNameEn": "WangJing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.47174, 39.991699]
+        },
+        "properties": {
+            "stationNameZH": "阜通",
+            "stationNameEn": "FuTong",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.481634, 39.984634]
+        },
+        "properties": {
+            "stationNameZH": "望京南",
+            "stationNameEn": "WangJing Nan",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.489496, 39.971109]
+        },
+        "properties": {
+            "stationNameZH": "将台",
+            "stationNameEn": "JiangTai",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.485919, 39.958375]
+        },
+        "properties": {
+            "stationNameZH": "东风北桥",
+            "stationNameEn": "DongFeng BeiQiao",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.474947, 39.944132]
+        },
+        "properties": {
+            "stationNameZH": "枣营",
+            "stationNameEn": "ZaoYing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.478291, 39.933492]
+        },
+        "properties": {
+            "stationNameZH": "朝阳公园",
+            "stationNameEn": "ChaoYangGongYuan",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.477307, 39.885275]
+        },
+        "properties": {
+            "stationNameZH": "平乐园",
+            "stationNameEn": "PingLeYuan",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.477318, 39.875437]
+        },
+        "properties": {
+            "stationNameZH": "北工大西门",
+            "stationNameEn": "BeiGong DaXiMen",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.440244, 39.865868]
+        },
+        "properties": {
+            "stationNameZH": "方庄",
+            "stationNameEn": "FangZhuang",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.411026, 39.86525]
+        },
+        "properties": {
+            "stationNameZH": "景泰",
+            "stationNameEn": "JingTai",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.365564, 39.862731]
+        },
+        "properties": {
+            "stationNameZH": "景风门",
+            "stationNameEn": "JingFengMen",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.355811, 39.861132]
+        },
+        "properties": {
+            "stationNameZH": "西铁营",
+            "stationNameEn": "Xi TieYing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.341978, 39.868086]
+        },
+        "properties": {
+            "stationNameZH": "菜户营",
+            "stationNameEn": "CaiHuYing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.331258, 39.867831]
+        },
+        "properties": {
+            "stationNameZH": "丽泽商务区",
+            "stationNameEn": "LiZe ShangWu Qu",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.3209, 39.867769]
+        },
+        "properties": {
+            "stationNameZH": "东管头",
+            "stationNameEn": "DongGuanTou",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.276061, 39.865226]
+        },
+        "properties": {
+            "stationNameZH": "大井",
+            "stationNameEn": "DaJing",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.253068, 39.864841]
+        },
+        "properties": {
+            "stationNameZH": "郭庄子",
+            "stationNameEn": "GuoZhuangZi",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.24048, 39.85947]
+        },
+        "properties": {
+            "stationNameZH": "大瓦窑",
+            "stationNameEn": "DaWaYao",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.201643, 39.861328]
+        },
+        "properties": {
+            "stationNameZH": "园博园",
+            "stationNameEn": "YuanBoYuan",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.187193, 39.8581]
+        },
+        "properties": {
+            "stationNameZH": "张郭庄",
+            "stationNameEn": "ZhangGuoZhuang",
+            "line": "地铁14号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.684732, 40.132573]
+        },
+        "properties": {
+            "stationNameZH": "俸伯",
+            "stationNameEn": "feng bo",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.657023, 40.129994]
+        },
+        "properties": {
+            "stationNameZH": "顺义",
+            "stationNameEn": "shun yi",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.641117, 40.129802]
+        },
+        "properties": {
+            "stationNameZH": "石门",
+            "stationNameEn": "shi men",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.609535, 40.128478]
+        },
+        "properties": {
+            "stationNameZH": "南法信",
+            "stationNameEn": "nan fa xin",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.564211, 40.114127]
+        },
+        "properties": {
+            "stationNameZH": "后沙峪",
+            "stationNameEn": "hou sha yu",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.557593, 40.084436]
+        },
+        "properties": {
+            "stationNameZH": "花梨坎",
+            "stationNameEn": "hua li kan",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.555127, 40.07003]
+        },
+        "properties": {
+            "stationNameZH": "国展",
+            "stationNameEn": "guo zhan",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.5347, 40.045113]
+        },
+        "properties": {
+            "stationNameZH": "孙河",
+            "stationNameEn": "sun he",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.50348, 40.033721]
+        },
+        "properties": {
+            "stationNameZH": "马泉营",
+            "stationNameEn": "ma quan ying",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.492968, 40.022201]
+        },
+        "properties": {
+            "stationNameZH": "崔各庄",
+            "stationNameEn": "cui ge zhuang",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.487105, 40.0032]
+        },
+        "properties": {
+            "stationNameZH": "望京东",
+            "stationNameEn": "wang jing dong",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.430947, 40.001134]
+        },
+        "properties": {
+            "stationNameZH": "关庄",
+            "stationNameEn": "guan zhuang",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.407845, 40.002619]
+        },
+        "properties": {
+            "stationNameZH": "安立路",
+            "stationNameEn": "an li lu",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.368143, 40.001492]
+        },
+        "properties": {
+            "stationNameZH": "北沙滩",
+            "stationNameEn": "bei sha tan",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.35267, 40.000958]
+        },
+        "properties": {
+            "stationNameZH": "六道口",
+            "stationNameEn": "liu dao kou",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.33953, 40.000673]
+        },
+        "properties": {
+            "stationNameZH": "清华东路西口",
+            "stationNameEn": "qing hua dong lu xi kou",
+            "line": "地铁15号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.130428, 40.068128]
+        },
+        "properties": {
+            "stationNameZH": "北安河",
+            "stationNameEn": "bei an he",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.161361, 40.068516]
+        },
+        "properties": {
+            "stationNameZH": "温阳路",
+            "stationNameEn": "wen yang lu",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.188145, 40.068936]
+        },
+        "properties": {
+            "stationNameZH": "稻香湖路",
+            "stationNameEn": "dao xiang hu lu",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.21585, 40.068454]
+        },
+        "properties": {
+            "stationNameZH": "屯佃",
+            "stationNameEn": "tun dian",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.238481, 40.071868]
+        },
+        "properties": {
+            "stationNameZH": "永丰",
+            "stationNameEn": "yong feng",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.248154, 40.065575]
+        },
+        "properties": {
+            "stationNameZH": "永丰南",
+            "stationNameEn": "yong feng nan",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.257923, 40.048703]
+        },
+        "properties": {
+            "stationNameZH": "西北旺",
+            "stationNameEn": "xi bei wang",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.27252, 40.032637]
+        },
+        "properties": {
+            "stationNameZH": "马连洼",
+            "stationNameEn": "ma lian wa",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.282272, 40.021398]
+        },
+        "properties": {
+            "stationNameZH": "农大南路",
+            "stationNameEn": "nong da nan lu",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.300157, 39.985067]
+        },
+        "properties": {
+            "stationNameZH": "万泉河桥",
+            "stationNameEn": "WanQuanHe Qiao",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.308092, 39.962052]
+        },
+        "properties": {
+            "stationNameZH": "苏州桥",
+            "stationNameEn": "SuZhou Qiao",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.309904, 39.947773]
+        },
+        "properties": {
+            "stationNameZH": "万寿寺",
+            "stationNameEn": "WanShouSi",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.334534, 39.923392]
+        },
+        "properties": {
+            "stationNameZH": "甘家口",
+            "stationNameEn": "GanJiaKou",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.334546, 39.914042]
+        },
+        "properties": {
+            "stationNameZH": "玉渊潭东门",
+            "stationNameEn": "YuYuanTan DongMen",
+            "line": "地铁16号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.476361, 39.856706]
+        },
+        "properties": {
+            "stationNameZH": "周家庄",
+            "stationNameEn": "ZhouJiaZhuang",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.495847, 39.8443]
+        },
+        "properties": {
+            "stationNameZH": "十八里店",
+            "stationNameEn": "ShiBaLiDian",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.552752, 39.818664]
+        },
+        "properties": {
+            "stationNameZH": "北神树",
+            "stationNameEn": "BeiShenShu",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.57667, 39.80939]
+        },
+        "properties": {
+            "stationNameZH": "次渠北",
+            "stationNameEn": "CiQu Bei",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.591563, 39.80355]
+        },
+        "properties": {
+            "stationNameZH": "次渠",
+            "stationNameEn": "CiQu",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.610278, 39.792539]
+        },
+        "properties": {
+            "stationNameZH": "嘉会湖",
+            "stationNameEn": "JiaHuiHu",
+            "line": "地铁17号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.346333, 39.823455]
+        },
+        "properties": {
+            "stationNameZH": "新发地",
+            "stationNameEn": "XinFaDi",
+            "line": "地铁19号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.363481, 39.889605]
+        },
+        "properties": {
+            "stationNameZH": "牛街",
+            "stationNameEn": "NiuJie",
+            "line": "地铁19号线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.195371, 40.244624]
+        },
+        "properties": {
+            "stationNameZH": "昌平西山口",
+            "stationNameEn": "chang ping xi shan kou",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.207729, 40.240255]
+        },
+        "properties": {
+            "stationNameZH": "十三陵景区",
+            "stationNameEn": "shi san ling jing qu",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.23359, 40.22055]
+        },
+        "properties": {
+            "stationNameZH": "昌平",
+            "stationNameEn": "chang ping",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.262059, 40.221726]
+        },
+        "properties": {
+            "stationNameZH": "昌平东关",
+            "stationNameEn": "chang ping dong guan",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.281949, 40.222001]
+        },
+        "properties": {
+            "stationNameZH": "北邵洼",
+            "stationNameEn": "bei shao wa",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.287534, 40.207492]
+        },
+        "properties": {
+            "stationNameZH": "南邵",
+            "stationNameEn": "nan shao",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.280465, 40.164666]
+        },
+        "properties": {
+            "stationNameZH": "沙河高教园",
+            "stationNameEn": "sha he gao jiao yuan",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.288865, 40.148278]
+        },
+        "properties": {
+            "stationNameZH": "沙河",
+            "stationNameEn": "sha he",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.293979, 40.1309]
+        },
+        "properties": {
+            "stationNameZH": "巩华城",
+            "stationNameEn": "gong hua cheng",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.29423, 40.09479]
+        },
+        "properties": {
+            "stationNameZH": "生命科学园",
+            "stationNameEn": "sheng ming ke xue yuan",
+            "line": "地铁昌平线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.365522, 39.735583]
+        },
+        "properties": {
+            "stationNameZH": "大兴新城",
+            "stationNameEn": "DaXing XinCheng",
+            "line": "北京大兴国际机场线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.416725, 39.511375]
+        },
+        "properties": {
+            "stationNameZH": "大兴机场",
+            "stationNameEn": "DaXing JiChang",
+            "line": "北京大兴国际机场线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.100817, 39.729028]
+        },
+        "properties": {
+            "stationNameZH": "阎村东",
+            "stationNameEn": "yan cun dong",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.125306, 39.723188]
+        },
+        "properties": {
+            "stationNameZH": "苏庄",
+            "stationNameEn": "su zhuang",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.140804, 39.723202]
+        },
+        "properties": {
+            "stationNameZH": "良乡南关",
+            "stationNameEn": "liang xiang nan guan",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.156282, 39.723157]
+        },
+        "properties": {
+            "stationNameZH": "良乡大学城西",
+            "stationNameEn": "liang xiang da xue cheng xi",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.176541, 39.723159]
+        },
+        "properties": {
+            "stationNameZH": "良乡大学城",
+            "stationNameEn": "liang xiang da xue cheng",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.18348, 39.729906]
+        },
+        "properties": {
+            "stationNameZH": "良乡大学城北",
+            "stationNameEn": "liang xiang da xue cheng bei",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.184985, 39.74793]
+        },
+        "properties": {
+            "stationNameZH": "广阳城",
+            "stationNameEn": "guang yang cheng",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.189486, 39.760636]
+        },
+        "properties": {
+            "stationNameZH": "篱笆房",
+            "stationNameEn": "li ba fang",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.212692, 39.763871]
+        },
+        "properties": {
+            "stationNameZH": "长阳",
+            "stationNameEn": "chang yang",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.21884, 39.794885]
+        },
+        "properties": {
+            "stationNameZH": "稻田",
+            "stationNameEn": "dao tian",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.291681, 39.80781]
+        },
+        "properties": {
+            "stationNameZH": "大葆台",
+            "stationNameEn": "da bao tai",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.313391, 39.81959]
+        },
+        "properties": {
+            "stationNameZH": "白盆窑",
+            "stationNameEn": "BaiPen Yao",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.32016, 39.829272]
+        },
+        "properties": {
+            "stationNameZH": "花乡东桥",
+            "stationNameEn": "HuaXiang DongQiao",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.321319, 39.852631]
+        },
+        "properties": {
+            "stationNameZH": "东管头南",
+            "stationNameEn": "DongGuanTou Nan",
+            "line": "地铁房山线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.615583, 40.052657]
+        },
+        "properties": {
+            "stationNameZH": "3号航站楼",
+            "stationNameEn": "3 Hao HangZhanLou",
+            "line": "首都机场线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.592808, 40.079311]
+        },
+        "properties": {
+            "stationNameZH": "2号航站楼",
+            "stationNameEn": "2 Hao HangZhanLou",
+            "line": "首都机场线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.263248, 39.985697]
+        },
+        "properties": {
+            "stationNameZH": "颐和园西门",
+            "stationNameEn": "yi he yuan xi men",
+            "line": "西郊线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.2481, 39.982113]
+        },
+        "properties": {
+            "stationNameZH": "茶棚",
+            "stationNameEn": "cha peng",
+            "line": "西郊线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.231977, 39.984001]
+        },
+        "properties": {
+            "stationNameZH": "万安",
+            "stationNameEn": "wan an",
+            "line": "西郊线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.215722, 39.993537]
+        },
+        "properties": {
+            "stationNameZH": "国家植物园",
+            "stationNameEn": "GuoJia ZhiWuYuan",
+            "line": "西郊线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.204491, 39.994056]
+        },
+        "properties": {
+            "stationNameZH": "香山",
+            "stationNameEn": "xiang shan",
+            "line": "西郊线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.08672, 39.724606]
+        },
+        "properties": {
+            "stationNameZH": "紫草坞",
+            "stationNameEn": "zi cao wu",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.080165, 39.716731]
+        },
+        "properties": {
+            "stationNameZH": "阎村",
+            "stationNameEn": "yan cun",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.06137, 39.713681]
+        },
+        "properties": {
+            "stationNameZH": "星城",
+            "stationNameEn": "xing cheng",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.039906, 39.709893]
+        },
+        "properties": {
+            "stationNameZH": "大石河东",
+            "stationNameEn": "da shi he dong",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.016606, 39.705103]
+        },
+        "properties": {
+            "stationNameZH": "马各庄",
+            "stationNameEn": "ma ge zhuang",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.006103, 39.701471]
+        },
+        "properties": {
+            "stationNameZH": "饶乐府",
+            "stationNameEn": "rao le fu",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [115.989599, 39.706061]
+        },
+        "properties": {
+            "stationNameZH": "房山城关",
+            "stationNameEn": "fang shan cheng guan",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [115.973395, 39.719615]
+        },
+        "properties": {
+            "stationNameZH": "燕山",
+            "stationNameEn": "yan shan",
+            "line": "地铁燕房线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.448364, 39.834217]
+        },
+        "properties": {
+            "stationNameZH": "肖村",
+            "stationNameEn": "xiao cun",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.459226, 39.827951]
+        },
+        "properties": {
+            "stationNameZH": "小红门",
+            "stationNameEn": "xiao hong men",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.460789, 39.80691]
+        },
+        "properties": {
+            "stationNameZH": "旧宫",
+            "stationNameEn": "jiu gong",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.480307, 39.803011]
+        },
+        "properties": {
+            "stationNameZH": "亦庄桥",
+            "stationNameEn": "yi zhuang qiao",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.490632, 39.80689]
+        },
+        "properties": {
+            "stationNameZH": "亦庄文化园",
+            "stationNameEn": "yi zhuang wen hua yuan",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.505403, 39.802971]
+        },
+        "properties": {
+            "stationNameZH": "万源街",
+            "stationNameEn": "wan yuan jie",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.513321, 39.793189]
+        },
+        "properties": {
+            "stationNameZH": "荣京东街",
+            "stationNameEn": "rong jing dong jie",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.521688, 39.782832]
+        },
+        "properties": {
+            "stationNameZH": "荣昌东街",
+            "stationNameEn": "rong chang dong jie",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.539901, 39.772962]
+        },
+        "properties": {
+            "stationNameZH": "同济南路",
+            "stationNameEn": "tong ji nan lu",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.562321, 39.783673]
+        },
+        "properties": {
+            "stationNameZH": "经海路",
+            "stationNameEn": "jing hai lu",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.581357, 39.795118]
+        },
+        "properties": {
+            "stationNameZH": "次渠南",
+            "stationNameEn": "ci qu nan",
+            "line": "地铁亦庄线"
+        }
+    }, {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.601913, 39.812607]
+        },
+        "properties": {
+            "stationNameZH": "亦庄火车站",
+            "stationNameEn": "yi zhuang huo che zhan",
+            "line": "地铁亦庄线"
+        }
+    }]
+}
