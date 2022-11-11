@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>GeoMesa SQL Example</name>
+  <description>Example of using GeoMesa SQL Programmatically</description>
+  <url>https://github.com/bxkftechteam/geomesa-sql</url>
+
+  <groupId>io.github.bxkftechteam</groupId>
+  <artifactId>geomesa-sql-example_2.12</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:https://github.com/bxkftechteam/geomesa-sql.git</connection>
+    <developerConnection>scm:git:ssh://github.com:bxkftechteam/geomesa-sql.git</developerConnection>
+    <url>https://github.com/bxkftechteam/geomesa-sql</url>
+  </scm>
+
+  <developers>
+    <developer>
+      <name>Kristin Cowalcijk</name>
+      <email>kristincowalcijk@gmail.com</email>
+      <organization>Bai Xing Car Service</organization>
+      <organizationUrl>https://www.baixingkefu.cn</organizationUrl>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+
+    <scala.version>2.12.13</scala.version>
+    <scala.binary.version>2.12</scala.binary.version>
+
+    <geomesa.sql.version>0.1.0</geomesa.sql.version>
+    <geomesa.version>3.4.1</geomesa.version>
+    <gt.version>23.3</gt.version>
+    <accumulo.version>2.0.1</accumulo.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.github.bxkftechteam</groupId>
+      <artifactId>geomesa-sql-jdbc_${scala.binary.version}</artifactId>
+      <version>${geomesa.sql.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-epsg-hsql</artifactId>
+      <version>${gt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.locationtech.geomesa</groupId>
+      <artifactId>geomesa-accumulo-datastore_${scala.binary.version}</artifactId>
+      <version>${geomesa.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.accumulo</groupId>
+      <artifactId>accumulo-core</artifactId>
+      <version>${accumulo.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+              </excludes>
+            </filter>
+          </filters>
+          <transformers>
+            <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+              <mainClass>com.spatialx.geomesa.sql.example.Example</mainClass>
+            </transformer>
+          </transformers>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <!-- include central so that it is searched before our alternate repos -->
+    <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>https://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <!-- geotools -->
+    <repository>
+      <id>osgeo</id>
+      <url>https://repo.osgeo.org/repository/release</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+</project>

@@ -4,9 +4,16 @@
 
 # GeoMesa SQL
 
-Run SQL queries on GeoMesa DataStores.
+Run SQL queries on GeoMesa DataStores, in the command line, or in your programs.
 
-## Getting Started
+[![asciicast](https://asciinema.org/a/536798.svg)](https://asciinema.org/a/536798)
+
+## Using GeoMesa SQL Programmatically
+
+GeoMesa SQL provides a package for accessing GeoMesa DataStores using JDBC
+interface. Please refer to the [example project](/example) for details.
+
+## Run SQL using Command Line Tool
 
 GeoMesa SQL comes up with a command line tool `geomesa-sqlline`, which is a
 sqlline based utility for running SQL queries on GeoMesa DataStores. It has
@@ -140,12 +147,6 @@ Run SQL queries with spatial functions:
 +------------------------------+----------------------------+
 10 rows selected (0.095 seconds)
 ```
-
-## Using GeoMesa SQL Programmatically
-
-GeoMesa SQL provides a package for accessing GeoMesa DataStores through JDBC
-interface. Please refer to the documentation and the example project for
-details.
 
 ## Building from Source
 
