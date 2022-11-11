@@ -20,10 +20,14 @@
 script_file=$(readlink -f $0)
 script_dir=$(dirname $script_file)
 GEOMESA_SQL_HOME=$(dirname $script_dir)
-GEOMESA_SQL_CONF_PATH="${GEOMESA_SQL_HOME}/conf"
-GEOMESA_HOME="${GEOMESA_HOME:-$GEOMESA_SQL_HOME}"
-GEOMESA_CONF_DIR="${GEOMESA_CONF_DIR:-$GEOMESA_HOME/conf}"
-GEOMESA_LOG_DIR="${GEOMESA_LOG_DIR:-$GEOMESA_HOME/logs}"
+GEOMESA_SQL_CONF_DIR="${GEOMESA_SQL_HOME}/conf"
+
+if [[ -f "${GEOMESA_SQL_CONF_DIR}/geomesa-sql-env.sh" ]]; then
+  . "${GEOMESA_SQL_CONF_DIR}/geomesa-sql-env.sh"
+else
+  echo "ERROR: could not read '${GEOMESA_SQL_CONF_DIR}/geomesa-sql-env.sh', aborting script" >&2
+  exit 1
+fi
 
 # Sanity checks for GEOMESA_HOME
 if [ ! -d "$GEOMESA_HOME" ]; then
@@ -36,7 +40,6 @@ if [ ! -d "$GEOMESA_HOME/bin" ]; then
 fi
 
 # Use geomesa-sql-cli jar in target directory or lib directory
-GEOMESA_SQL_LIB_PATH="${GEOMESA_SQL_HOME}/lib"
 if [ -d "${GEOMESA_SQL_HOME}/target" ]; then
     GEOMESA_SQL_CLI_JAR_NAME=$(ls ${GEOMESA_SQL_HOME}/target | grep -Ev "javadoc.jar|sources.jar" | grep "^geomesa-sql-cli_.*.jar\$" | head -n1)
     if [ -n "$GEOMESA_SQL_CLI_JAR_NAME" ]; then
@@ -127,7 +130,7 @@ function get_classpath() {
 
 
 # Run sqlline
-GEOMESA_CLASSPATH="$(get_classpath):${GEOMESA_SQL_CONF_PATH}:${GEOMESA_SQL_CLI_JAR_PATH}"
+GEOMESA_CLASSPATH="$(get_classpath):${GEOMESA_SQL_CONF_DIR}:${GEOMESA_SQL_CLI_JAR_PATH}"
 
 case "$1" in
     classpath)
