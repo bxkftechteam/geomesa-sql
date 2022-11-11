@@ -74,6 +74,15 @@ sed_i '1,/<scala\.binary\.version>[0-9]*\.[0-9]*</s/<scala\.binary\.version>[0-9
 sed_i '1,/<scala\.version>[0-9]*\.[0-9]*\.[0-9]*</s/<scala\.version>[0-9]*\.[0-9]*\.[0-9]*</<scala.version>'$FULL_VERSION'</' \
   "$BASEDIR/pom.xml"
 
+# Also update <scala.binary.version> in POM of example project
+# Match any scala binary version to ensure idempotency
+sed_i '1,/<scala\.binary\.version>[0-9]*\.[0-9]*</s/<scala\.binary\.version>[0-9]*\.[0-9]*</<scala.binary.version>'$TO_VERSION'</' \
+  "$BASEDIR/example/pom.xml"
+
+# Also update <scala.version> in POM of example project
+sed_i '1,/<scala\.version>[0-9]*\.[0-9]*\.[0-9]*</s/<scala\.version>[0-9]*\.[0-9]*\.[0-9]*</<scala.version>'$FULL_VERSION'</' \
+  "$BASEDIR/example/pom.xml"
+
 # Update enforcer rules
 sed_i 's|<exclude>\*:\*_'$TO_VERSION'</exclude>|<exclude>*:*_'$FROM_VERSION'</exclude>|' "$BASEDIR/pom.xml"
 sed_i 's|<regex>'$FROM_VERSION'\.\*</regex>|<regex>'$TO_VERSION'.*</regex>|' "$BASEDIR/pom.xml"

@@ -4,13 +4,20 @@
 
 # GeoMesa SQL
 
-Run SQL queries on GeoMesa DataStores.
+Run SQL queries on GeoMesa DataStores, in the command line, or in your programs.
 
-## Getting Started
+[![asciicast](https://asciinema.org/a/536798.svg)](https://asciinema.org/a/536798)
+
+## Using GeoMesa SQL Programmatically
+
+GeoMesa SQL provides a package for accessing GeoMesa DataStores using JDBC
+interface. Please refer to the [example project](/example) for details.
+
+## Run SQL using Command Line Tool
 
 GeoMesa SQL comes up with a command line tool `geomesa-sqlline`, which is a
-sqlline based utility for running SQL queries on GeoMesa DataStores. It has
-been tested on the following datastores:
+[sqlline](https://github.com/julianhyde/sqlline) based utility for running SQL
+queries on GeoMesa DataStores. It has been tested on the following datastores:
 
 * Accumulo
 * HBase
@@ -18,24 +25,25 @@ been tested on the following datastores:
 * Redis
 * FileSystem
 
-### Prerequisities
+### Prerequisites
 
 You need a working [GeoMesa command line tool](http://www.geomesa.org/documentation/stable/user/cli/index.html) for
 accessing your GeoMesa DataStore. GeoMesa SQL has been tested with GeoMesa 3.4.1, other versions may also work.
 
 ### Download the binary distribution
 
-You can download the binary distribution from [Releases](https://github.com/bxkftechteam/geomesa-sql/releases). Please make sure that
-the scala version of GeoMesa SQL should match with the GeoMesa command line
-tool you are using.
+You can download the binary distribution from
+[Releases](https://github.com/bxkftechteam/geomesa-sql/releases). Please make
+sure that the scala version of GeoMesa SQL matches with the GeoMesa command
+line tool you are using.
 
 ### Setup `GEOMESA_HOME` environment variable
 
-GeoMesa SQL command line tool needs jars and configs of GeoMesa command line
-tool. `GEOMESA_HOME` must be configured properly before using `geomesa-sqlline`
-command. You can configure `GEOMESA_HOME` in
-`geomesa-sql/conf/geomesa-sql-env.sh`, or setting it directly on by running
-`export GEOMESA_HOME=/path/to/geomesa`.
+GeoMesa SQL command line tool needs jars and config files in GeoMesa command
+line tool. `GEOMESA_HOME` must be configured properly before using
+`geomesa-sqlline` command. You can configure `GEOMESA_HOME` in
+`geomesa-sql/conf/geomesa-sql-env.sh`, or setting it temporarily in current
+session by running `export GEOMESA_HOME=/path/to/geomesa`.
 
 ### Using GeoMesa SQL command line tool
 
@@ -45,16 +53,15 @@ You can run GeoMesa SQL command line tool using this command:
 geomesa-sql -c <catalog> [-p <datastore_params>]
 ```
 
-For example, to access GeoMesa Accumulo or HBase datastore in catalog
-`geomesa` using default datastore configuration, run the following
-command:
+For example, to access GeoMesa Accumulo or HBase DataStore in catalog `geomesa`
+using default datastore configuration, we can run the following command:
 
 ```
 geomesa-sql -c geomesa
 ```
 
 If you're accessing GeoMesa DataStore requiring more parameters other than
-catalog, you can specify additional datastore parameters using `-p` option. For
+catalog, you can specify additional datastore parameters using `-p`. For
 example, we need to specify `cassandra.contact.point` and `cassandra.keyspace`
 when accessing GeoMesa Cassandra:
 
@@ -78,7 +85,7 @@ list tables in the catalog using `!table`:
 +-----------+-------------+------------------------+--------------+---------+----------+------------+
 ```
 
-List fields of a table using `!describe "<table_name>"`:
+List columns in a table using `!describe "<table_name>"`:
 
 ```
 0: jdbc:geomesa:cassandra.catalog=geomesa> !describe "starbucks"
@@ -141,12 +148,6 @@ Run SQL queries with spatial functions:
 10 rows selected (0.095 seconds)
 ```
 
-## Using GeoMesa SQL Programmatically
-
-GeoMesa SQL provides a package for accessing GeoMesa DataStores through JDBC
-interface. Please refer to the documentation and the example project for
-details.
-
 ## Building from Source
 
 Requirements:
@@ -163,10 +164,10 @@ cd geomesa-sql
 mvn clean package
 ```
 
-This will build the artifacts and run unit tests using a temporary mini
-accumulo cluster. You can run `mvn clean package -DskipTests` to skip running
-tests. The distribution package containing the `geomesa-sqlline` tool will be
-generated in `geomesa-sql-dist/target/` directory.
+This will build the artifacts and run unit tests using a mini Accumulo
+cluster. You can run `mvn clean package -DskipTests` to skip running tests. The
+distribution package containing the `geomesa-sqlline` tool will be generated in
+`geomesa-sql-dist/target` directory.
 
 This project depends on Scala 2.12 by default. You can run
 `./build/change-scala-version.sh 2.11` to switch dependency to Scala 2.11.
