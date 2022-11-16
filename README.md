@@ -50,14 +50,14 @@ session by running `export GEOMESA_HOME=/path/to/geomesa`.
 You can run GeoMesa SQL command line tool using this command:
 
 ```
-geomesa-sql -c <catalog> [-p <datastore_params>]
+geomesa-sqlline -c <catalog> [-p <datastore_params>]
 ```
 
 For example, to access GeoMesa Accumulo or HBase DataStore in catalog `geomesa`
 using default datastore configuration, we can run the following command:
 
 ```
-geomesa-sql -c geomesa
+geomesa-sqlline -c geomesa
 ```
 
 If you're accessing GeoMesa DataStore requiring more parameters other than
@@ -66,10 +66,10 @@ example, we need to specify `cassandra.contact.point` and `cassandra.keyspace`
 when accessing GeoMesa Cassandra:
 
 ```
-geomesa-sql -c geomesa -p "cassandra.contact.point=localhost:9042;cassandra.keyspace=geomesa"
+geomesa-sqlline -c geomesa -p "cassandra.contact.point=localhost:9042;cassandra.keyspace=geomesa"
 ```
 
-`geomesa-sql` will bring you an interactive shell to run SQL queries. You can
+`geomesa-sqlline` will bring you an interactive shell to run SQL queries. You can
 list tables in the catalog using `!table`:
 
 ```
