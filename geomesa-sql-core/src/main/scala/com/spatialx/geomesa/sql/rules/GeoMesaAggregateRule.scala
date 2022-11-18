@@ -43,10 +43,17 @@ class GeoMesaAggregateRule(config: GeoMesaRuleConfig) extends RelRule[GeoMesaRul
     val projection = tableScan.scanParams.columnIndexList
     val groupedColumnId = if (cardinality == 1) Some(groupSet.nth(0)) else None
     val aggCalls = agg.getAggCallList.asScala
-    val statsSpecs = aggCallsToStatsSpecs(groupedColumnId, aggCalls, sft, projection)
-    // Only push down aggregation to table scan if all aggregations were supported by GeoMesa
-    if (statsSpecs.size == aggCalls.size) {
-      call.transformTo(convert(tableScan, agg.getRowType, statsSpecs))
+    if (aggCalls.isEmpty && groupedColumnId.isDefined) {
+      // GROUP BY without aggregation function, will run as an EnumerationStat query
+      val statsSpecs = enumStatSpecs(groupedColumnId, sft, projection)
+      if (statsSpecs.nonEmpty) {
+        call.transformTo(convert(tableScan, agg.getRowType, statsSpecs))
+      }
+    } else {
+      val statsSpecs = aggCallsToStatsSpecs(groupedColumnId, aggCalls, sft, projection)
+      if (statsSpecs.size == aggCalls.size) {
+        call.transformTo(convert(tableScan, agg.getRowType, statsSpecs))
+      }
     }
   }
 
@@ -56,21 +63,18 @@ class GeoMesaAggregateRule(config: GeoMesaRuleConfig) extends RelRule[GeoMesaRul
     logicalTableScan.withAggregate(aggResultRowType, statsStrings, statAttributes)
   }
 
+  private def enumStatSpecs(groupedColumnId: Option[Int], sft: SimpleFeatureType, projection: Seq[Int]): Seq[(String, String)] = {
+    val groupByAttribute = resolveGroupedAttribute(groupedColumnId, sft, projection)
+    groupByAttribute match {
+      case Some(groupedAttributeName) => Seq((Stat.Enumeration(groupedAttributeName), ""))
+      case None => Seq.empty
+    }
+  }
+
   private def aggCallsToStatsSpecs(groupedColumnId: Option[Int], aggCalls: Seq[AggregateCall],
                                     sft: SimpleFeatureType, projection: Seq[Int]): Seq[(String, String)] = {
     val project = (ordinal: Int) => if (projection.nonEmpty) projection(ordinal) else ordinal
-    val groupByAttribute = groupedColumnId match {
-      case Some(columnId) =>
-        val attrIndex = project(columnId)
-        // Validate if grouped column was supported by GeoMesa
-        if (attrIndex == 0) None else {
-          val attrType = sft.getType(attrIndex - 1)
-          val binding = attrType.getBinding
-          if (isUnsupportedType(binding)) None
-          else Some(sft.getDescriptor(attrIndex - 1).getLocalName)
-        }
-      case None => Some("")
-    }
+    val groupByAttribute = resolveGroupedAttribute(groupedColumnId, sft, projection)
     groupByAttribute match {
       case Some(groupedAttributeName) => aggCalls.flatMap { call =>
         aggCallToStatSpec(call, sft, project) match {
@@ -99,6 +103,22 @@ class GeoMesaAggregateRule(config: GeoMesaRuleConfig) extends RelRule[GeoMesaRul
         }
       // TODO: support more aggregation functions
       case _ => None
+    }
+  }
+
+  private def resolveGroupedAttribute(groupedColumnId: Option[Int], sft: SimpleFeatureType, projection: Seq[Int]): Option[String] = {
+    val project = (ordinal: Int) => if (projection.nonEmpty) projection(ordinal) else ordinal
+    groupedColumnId match {
+      case Some(columnId) =>
+        val attrIndex = project(columnId)
+        // Validate if grouped column was supported by GeoMesa
+        if (attrIndex == 0) None else {
+          val attrType = sft.getType(attrIndex - 1)
+          val binding = attrType.getBinding
+          if (isUnsupportedType(binding)) None
+          else Some(sft.getDescriptor(attrIndex - 1).getLocalName)
+        }
+      case None => Some("")
     }
   }
 

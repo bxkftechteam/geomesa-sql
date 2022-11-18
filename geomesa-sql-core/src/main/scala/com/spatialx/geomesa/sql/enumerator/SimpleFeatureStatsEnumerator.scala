@@ -18,6 +18,7 @@ import org.apache.calcite.linq4j.Enumerator
 import org.geotools.data.{DataStore, Query, Transaction}
 import com.spatialx.geomesa.sql.enumerator.AttributeConverter.convert
 import org.locationtech.geomesa.index.iterators.StatsScan
+import org.locationtech.geomesa.utils.stats.EnumerationStat
 import org.locationtech.geomesa.utils.stats.{CountStat, GroupBy, MinMax, SeqStat, Stat}
 import org.opengis.feature.simple.SimpleFeatureType
 
@@ -77,7 +78,14 @@ class SimpleFeatureStatsEnumerator(
           (convert(groupKey) +: aggrValueArray).toArray
         }.toArray
       } else {
-        if (nonGroupStats.length > 1) Array(nonGroupStats.toArray) else nonGroupStats.toArray
+        stat match {
+          case _: EnumerationStat[_] =>
+            // EnumerationStat always generate one single column of multiple rows
+            nonGroupStats.toArray
+          case _ =>
+            // Other non-grouped stat queries always generate one single row with one or multiple columns
+            if (nonGroupStats.length > 1) Array(nonGroupStats.toArray) else nonGroupStats.toArray
+        }
       }
     } finally {
       reader.close()
@@ -108,6 +116,7 @@ class SimpleFeatureStatsEnumerator(
       case s: GroupBy[_] => parseGroupedStat(s, attribute)
       case s: CountStat => nonGroupStats += Long.box(s.count)
       case s: MinMax[_] => nonGroupStats += convert((if (attribute == "min") s.min else s.max).asInstanceOf[AnyRef])
+      case s: EnumerationStat[_] => nonGroupStats ++= s.values.map(v => convert(v.asInstanceOf[AnyRef]))
       case _ => throw new NotImplementedError(s"GeoMesa Stat type ${stat.getClass.getCanonicalName} is not supported yet")
     }
   }

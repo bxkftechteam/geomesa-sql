@@ -149,9 +149,69 @@ class AggregateTest extends Specification {
       verify("WITH q1 AS (SELECT F, COUNT(1) AS C, MIN(I) AS MINI, MAX(S) AS MAXS FROM TEST_DATA WHERE F < 10 GROUP BY F) SELECT F, C, MINI FROM q1 WHERE MINI > 80",
         Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*F < 10.*stats=""".r))
     }
+
+    "Handle group by boolean without aggregation function" in {
+      verify("SELECT B FROM TEST_DATA WHERE I < 50 GROUP BY B",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*I < 50.*project=.*B.*""".r))
+    }
+
+    "Handles nested aggregation on boolean column correctly" in {
+      verify("SELECT COUNT(*) FROM (SELECT B, COUNT(*) FROM TEST_DATA WHERE I > 900 GROUP BY B)", Seq(
+        """GeoMesaPhysicalTableScan.*gtFilter=.*900.*project=.*B""".r))
+    }
+
+    "Push down group by integer without aggregation function" in {
+      verifyScannable("SELECT I FROM TEST_REPEATED_DATA WHERE I < 5 GROUP BY I",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*5.*stats=.*Enumeration""".r),
+        Seq("EnumerableCalc".r, "EnumerableAggregate".r)) and
+        verifyScannable("SELECT I FROM TEST_REPEATED_DATA WHERE I < 1 GROUP BY I",
+          Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*1.*stats=.*Enumeration""".r),
+          Seq("EnumerableCalc".r, "EnumerableAggregate".r)) and
+        verifyScannable("SELECT I FROM TEST_REPEATED_DATA WHERE I < 0 GROUP BY I",
+          Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*0.*stats=.*Enumeration""".r),
+          Seq("EnumerableCalc".r, "EnumerableAggregate".r), notEmpty = false)
+    }
+
+    "Push down group by string without aggregation function" in {
+      verifyScannable("SELECT S FROM TEST_REPEATED_DATA WHERE I < 5 GROUP BY S",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*5.*stats=.*Enumeration""".r),
+        Seq("EnumerableCalc".r, "EnumerableAggregate".r))
+    }
+
+    "Push down group by float without aggregation function" in {
+      verifyScannable("SELECT F FROM TEST_REPEATED_DATA WHERE I < 5 GROUP BY F",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*5.*stats=.*Enumeration""".r),
+        Seq("EnumerableCalc".r, "EnumerableAggregate".r))
+    }
+
+    "Push down group by date without aggregation function" in {
+      verifyScannable("SELECT TS FROM TEST_REPEATED_DATA WHERE I < 5 GROUP BY TS",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*5.*stats=.*Enumeration""".r),
+        Seq("EnumerableCalc".r, "EnumerableAggregate".r))
+    }
+
+    "Handles nested aggregation on string column correctly" in {
+      verifyScannable("SELECT COUNT(*) FROM (SELECT S, COUNT(*) FROM TEST_REPEATED_DATA WHERE I < 5 GROUP BY S)", Seq(
+        """GeoMesaPhysicalTableScan.*gtFilter=.*5""".r))
+    }
+
+    "Push down SELECT DISTINCT" in {
+      verifyScannable("SELECT DISTINCT S FROM TEST_REPEATED_DATA WHERE I < 5",
+        Seq("""GeoMesaPhysicalTableScan.*gtFilter=.*5.*stats=.*Enumeration""".r),
+        Seq("EnumerableCalc".r, "EnumerableAggregate".r))
+    }
+
+    "Handles SELECT DISTINCT with multiple columns correctly" in {
+      verifyScannable("SELECT DISTINCT I, S FROM TEST_REPEATED_DATA WHERE I < 5", Seq.empty) and
+        verifyScannable("SELECT DISTINCT * FROM TEST_REPEATED_DATA WHERE I < 5", Seq.empty)
+    }
   }
 
   private def verify(sql: String, planPatterns: Seq[Regex], unexpectedPlanPatterns: Seq[Regex] = Seq.empty, notEmpty: Boolean = true): Result = {
     verifyPlan(sql, PrepareTestDataStore.model, planPatterns, unexpectedPlanPatterns) and verifyResult(sql, PrepareTestDataStore.model, "model-csv.yaml", notEmpty = notEmpty)
+  }
+
+  private def verifyScannable(sql: String, planPatterns: Seq[Regex], unexpectedPlanPatterns: Seq[Regex] = Seq.empty, notEmpty: Boolean = true): Result = {
+    verifyPlan(sql, PrepareTestDataStore.model, planPatterns, unexpectedPlanPatterns) and verifyResult(sql, PrepareTestDataStore.model, PrepareTestDataStore.scannableModel, notEmpty = notEmpty)
   }
 }

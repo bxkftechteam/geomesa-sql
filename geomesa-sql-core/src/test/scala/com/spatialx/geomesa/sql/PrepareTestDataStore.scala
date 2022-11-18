@@ -144,6 +144,36 @@ object PrepareTestDataStore {
     }
   }
 
+  def prepareRepeatedData(ds: DataStore, distinctValues: Int, repeat: Int): Unit = {
+    val spec =
+      """I:Integer,
+        |L:Long,
+        |F:Float,
+        |D:Double,
+        |S:String,
+        |TS:Date
+    """.stripMargin
+    val sft = SimpleFeatureTypes.createType("test_repeated_data", spec)
+    ds.createSchema(sft)
+    WithClose(ds.getFeatureWriterAppend(sft.getTypeName, Transaction.AUTO_COMMIT)) { writer =>
+      for (i <- 0 until distinctValues) {
+        for (j <- 0 until repeat) {
+          val fid = s"#${i * repeat + j}"
+          val sf = new ScalaSimpleFeature(sft, fid)
+          sf.setAttribute("I", Int.box(i))
+          sf.setAttribute("L", Long.box(i + 10000000000L))
+          sf.setAttribute("F", Float.box(i * 0.1f))
+          sf.setAttribute("D", Double.box(i * 0.01))
+          sf.setAttribute("S", f"str$i%03d")
+          sf.setAttribute("TS", new Date(1600000000000L + i * 1000L))
+          sf.getUserData.put(Hints.USE_PROVIDED_FID, java.lang.Boolean.TRUE)
+          sf.getUserData.put(Hints.PROVIDED_FID, fid)
+          FeatureUtils.write(writer, sf)
+        }
+      }
+    }
+  }
+
   def prepareTestDataForModification(ds: DataStore, typeName: String, rows: Int): Unit = {
     val spec =
       """I:Integer,
@@ -193,6 +223,7 @@ object PrepareTestDataStore {
     prepareTestComplexData(ds)
     prepareTestGeomData(ds)
     prepareTestGeomDataSimple(ds)
+    prepareRepeatedData(ds, 10, 5)
     ds
   }
 
