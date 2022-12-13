@@ -148,6 +148,29 @@ Run SQL queries with spatial functions:
 10 rows selected (0.095 seconds)
 ```
 
+If you want to query tables scattered in multiple catalogs, you can write a
+[Calcite model file](https://calcite.apache.org/docs/model.html) and run
+`geomesa-sql -m /path/to/calcite-model-file.yaml`. Here is an example of
+Calcite model file:
+
+```yaml
+version: 1.0
+defaultSchema: catalog1
+schemas:
+  - name: catalog1
+    type: custom
+    factory: com.spatialx.geomesa.sql.GeoMesaSchemaFactory
+    operand:
+      # Options for connecting to GeoMesa DataStore
+      "hbase.catalog": "geomesa_catalog1"
+
+  - name: catalog2
+    type: custom
+    factory: com.spatialx.geomesa.sql.GeoMesaSchemaFactory
+    operand:
+      "hbase.catalog": "geomesa_catalog2"
+```
+
 ## Building from Source
 
 Requirements:

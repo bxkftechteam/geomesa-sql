@@ -146,16 +146,20 @@ esac
 
 usage() {
     echo "Usage: $0 -c <catalog> [-p <datastore params>]" 1>&2
+    echo "       $0 -m <calcite_model_file>" 1>&2
     exit 1;
 }
 
-while getopts ":c:p:f:e:h" o; do
+while getopts ":c:p:m:f:e:h" o; do
     case "$o" in
         c)
             CATALOG=${OPTARG}
             ;;
         p)
             DS_PARAMS=${OPTARG}
+            ;;
+        m)
+            CALCITE_MODEL_FILE=${OPTARG}
             ;;
         f)
             INPUT_FILE=${OPTARG}
@@ -168,7 +172,7 @@ while getopts ":c:p:f:e:h" o; do
     esac
 done
 
-if [ -z "$CATALOG" ] && [ -z "$DS_PARAMS" ]; then
+if [ -z "$CATALOG" ] && [ -z "$DS_PARAMS" ] && [ -z "$CALCITE_MODEL_FILE" ]; then
     usage
 fi
 
@@ -176,7 +180,11 @@ GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dlog4j.configuration=file://${GEOMESA_CONF_
 GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dgeomesa.home=${GEOMESA_HOME}"
 GEOMESA_SQL_OPTS="$GEOMESA_SQL_OPTS -Dgeomesa.log.dir=${GEOMESA_LOG_DIR}"
 
-JDBC_URL="jdbc:geomesa:${CATALOG_PROP_NAME}=${CATALOG};fun=spatial;caseSensitive=false;${DS_PARAMS}"
+if [ -z "$CALCITE_MODEL_FILE" ]; then
+    JDBC_URL="jdbc:geomesa:${CATALOG_PROP_NAME}=${CATALOG};fun=spatial;caseSensitive=false;${DS_PARAMS}"
+else
+    JDBC_URL="jdbc:calcite:model=${CALCITE_MODEL_FILE};fun=spatial;caseSensitive=false"
+fi
 
 mkdir -p "${GEOMESA_LOG_DIR}"
 
