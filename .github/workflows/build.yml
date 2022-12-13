@@ -113,7 +113,7 @@ jobs:
     - name: Unpack the package
       run: mkdir -p geomesa-sql-dist && tar xf geomesa-sql-dist_${{matrix.scala}}-*-bin.tar.gz --strip-components=1 -C geomesa-sql-dist
     - name: Download hbase
-      run: wget "https://dlcdn.apache.org/hbase/2.5.1/hbase-2.5.1-bin.tar.gz" && tar xf hbase-2.5.1-bin.tar.gz
+      run: wget "https://archive.apache.org/dist/hbase/2.5.1/hbase-2.5.1-bin.tar.gz" && tar xf hbase-2.5.1-bin.tar.gz
     - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-${{matrix.geomesa}}/geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
     - run: tar xf geomesa-hbase_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
     - name: Setup HBase and GeoMesa coprocessor
@@ -220,9 +220,10 @@ jobs:
     - run: wget https://github.com/locationtech/geomesa/releases/download/geomesa-3.4.1/geomesa-cassandra_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
     - run: tar xf geomesa-cassandra_${{matrix.scala}}-${{matrix.geomesa}}-bin.tar.gz
     - name: Download cassandra
-      run: wget "https://dlcdn.apache.org/cassandra/3.11.14/apache-cassandra-3.11.14-bin.tar.gz" && tar xf apache-cassandra-3.11.14-bin.tar.gz
+      run: wget "https://archive.apache.org/dist/cassandra/3.11.14/apache-cassandra-3.11.14-bin.tar.gz" && tar xf apache-cassandra-3.11.14-bin.tar.gz
     - name: Launch cassandra
       run: |
+        sudo apt install python2
         ./apache-cassandra-3.11.14/bin/cassandra
         while ! ./apache-cassandra-3.11.14/bin/cqlsh -e 'describe cluster' ; do
           sleep 1
